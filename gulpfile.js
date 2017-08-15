@@ -45,6 +45,10 @@ gulp.task('metalsmith', function (callback) {
             partials: 'partial',
             partialExtension: '.hbs'
         }))
+        .use(assets({
+            source: './assets',
+            destination: './assets'
+        }))
         .build(function (err) {
             if (err)
                 throw err;
