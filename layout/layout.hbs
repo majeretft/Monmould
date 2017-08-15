@@ -19,8 +19,12 @@
 <body>
 
     {{#if DEBUG}}
-    <div class="container text-right"><a href="/debug-ui/">DEBUG UI</a></div>
-    {{/if}} {{> menu }}
+    <div>
+        <div class="container text-right"><a href="/debug-ui/">DEBUG UI</a></div>
+    </div>
+    {{/if}}
+    
+    {{> menu }}
 
     <div class="container">
         {{{contents}}}
