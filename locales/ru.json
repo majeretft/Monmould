@@ -1,7 +1,9 @@
 {
-    "home": "Главная",
-    "about": "О Компании",
-    "product-and-technology": "Продукция и технологии",
-    "portfolio": "Портфолио",
-    "contact": "Контакты"
+	"menu": {
+		"home": "Главная",
+		"about": "О Компании",
+		"product-and-technology": "Продукция и технологии",
+		"portfolio": "Портфолио",
+		"contact": "Контакты"
+	}
 }

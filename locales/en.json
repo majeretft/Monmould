@@ -1,7 +1,9 @@
 {
-    "home": "Home",
-    "about": "About us",
-    "product-and-technology": "Product and technology",
-    "portfolio": "Portfolio",
-    "contact": "Contact"
+	"menu": {
+		"home": "Home",
+		"about": "About us",
+		"product-and-technology": "Product and technology",
+		"portfolio": "Portfolio",
+		"contact": "Contact"
+	}
 }

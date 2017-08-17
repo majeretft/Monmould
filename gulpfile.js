@@ -66,7 +66,8 @@ gulp.task('metalsmith', function (callback) {
         .use(i18n({
             default: options.localeDefault,
             locales: options.localeList,
-            directory: 'locales'
+            directory: 'locales',
+            objectNotation: true
         }))
         .use(msIf(!!process.env.DEBUG, debugUi.report('i18n')))
 
