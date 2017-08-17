@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>{{title}}</title>
+    <title>@model.title</title>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,18 +19,18 @@
 <body>
 
     <header>
-        {{> menu }}
+        @html.include("partial/menu.cshtml", model)
     </header>
 
     <div class="container">
-        {{{contents}}}
+        @html.raw(model.contents)
     </div>
 
-    {{#if DEBUG}}
-    <div>
-        <div class="container text-right"><a href="/debug-ui/">DEBUG UI</a></div>
-    </div>
-    {{/if}}
+    @if(model.DEBUG){
+        <div>
+            <div class="container text-right"><a href="/debug-ui/">DEBUG UI</a></div>
+        </div>
+    }
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"

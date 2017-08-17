@@ -81,16 +81,6 @@ gulp.task('metalsmith', function (callback) {
         // }))
         // .use(msIf(!!process.env.DEBUG, debugUi.report('inPlace')))
 
-        // Compiling layouts
-        .use(layout({
-            engine: 'handlebars',
-            default: 'layout.hbs',
-            directory: 'layout',
-            partials: 'partial',
-            partialExtension: '.hbs'
-        }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('layout')))
-
         // Adding links
         .use(permalinks({
             pattern: ':locale/:uri',
@@ -110,6 +100,14 @@ gulp.task('metalsmith', function (callback) {
             }]
         }))
         .use(msIf(!!process.env.DEBUG, debugUi.report('permalinks')))
+
+        // Compiling layouts
+        .use(layout({
+            engine: 'vash',
+            default: 'layout.cshtml',
+            directory: 'layout'
+        }))
+        .use(msIf(!!process.env.DEBUG, debugUi.report('layout')))
 
         // Copiyng static assets
         .use(assets({
@@ -141,7 +139,7 @@ gulp.task('serve', ['build'], function () {
         server: { baseDir: `./${getDir()}` }
     });
 
-    gulp.watch([`./${options.dirSrc}/**/*.md`, './layout/**/*.hbs', './partial/**/*.hbs'], ['metalsmith']);
+    gulp.watch([`./${options.dirSrc}/**/*.md`, './layout/**/*.cshtml', './partial/**/*.cshtml'], ['metalsmith']);
     gulp.watch(['./less/**/*.less'], ['less']);
 });
 

@@ -1,7 +1,7 @@
 {
 	"menu": {
-		"home": "Главная",
-		"about": "О Компании",
+		"index": "Главная",
+		"about-us": "О Компании",
 		"product-and-technology": "Продукция и технологии",
 		"portfolio": "Портфолио",
 		"contact": "Контакты"
