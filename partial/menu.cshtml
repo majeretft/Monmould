@@ -29,8 +29,14 @@
                 }
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">RU</a></li>
-                <li><a href="#">EN</a></li>
+                @model.locales.forEach(function(l) {
+                    var lang = model.lang(l);
+                    var href = '/' + (lang ? lang.path : '/');
+
+                    <li class="@(lang && model.locale === l ? 'active' : '')">
+                        <a href="@html.raw(href)">@l.toUpperCase()</a>
+                    </li>
+                })
             </ul>
         </div>
         @* /.navbar-collapse *@
