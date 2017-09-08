@@ -10,6 +10,9 @@ let msIf = require('metalsmith-if');
 let inPlace = require('metalsmith-in-place');
 let i18n = require('metalsmith-i18n');
 let multiLanguage = require('metalsmith-multi-language');
+let sitemap = require('metalsmith-sitemap');
+let robots = require('metalsmith-robots');
+let updated = require('metalsmith-updated');
 
 let gulp = require('gulp');
 let less = require('gulp-less');
@@ -18,12 +21,15 @@ let sourcemaps = require('gulp-sourcemaps');
 let BrowserSync = require('browser-sync');
 let runSequence = require('run-sequence');
 
+let linkGen = require('./util/linkGen');
+
 let options = {
     dirBuild: '_build',
     dirPublish: '_publish',
     dirSrc: 'src',
     localeDefault: 'ru',
-    localeList: ['ru', 'en']
+    localeList: ['ru', 'en'],
+    canonical: 'http://www.example.com'
 };
 
 let getDir = function () {
@@ -45,6 +51,10 @@ gulp.task('metalsmith', function (callback) {
         // Adding environment variables to metadata
         .use(environment())
         .use(msIf(!!process.env.DEBUG, debugUi.report('environment')))
+        
+        // Adds created and updated attributes to files based on cached information saved in a file
+        .use(updated())
+        .use(msIf(!!process.env.DEBUG, debugUi.report('updated')))
 
         // Splitting src by localization
         .use(collections({
@@ -109,6 +119,28 @@ gulp.task('metalsmith', function (callback) {
         }))
         .use(msIf(!!process.env.DEBUG, debugUi.report('layout')))
 
+        // Add links to use with sitemap
+        .use(linkGen({
+            propertyCaption: 'sitemapLinks'
+        }))
+        .use(msIf(!!process.env.DEBUG, debugUi.report('linkGen')))
+
+        // Generating sitemap
+        .use(sitemap({
+            hostname: options.canonical,
+            omitIndex: true,
+            modifiedProperty: 'updated',
+            links: 'sitemapLinks'
+        }))
+        .use(msIf(!!process.env.DEBUG, debugUi.report('sitemap')))
+
+        // Generating robots txt
+        .use(robots({
+            allow: '/',
+            sitemap: `${options.canonical}/sitemap.xml`
+        }))
+        .use(msIf(!!process.env.DEBUG, debugUi.report('robots')))
+
         // Copiyng static assets
         .use(assets({
             source: './assets',
@@ -136,7 +168,8 @@ gulp.task('less', function () {
 gulp.task('serve', ['build'], function () {
     let browserSync = BrowserSync.create();
     browserSync.init({
-        server: { baseDir: `./${getDir()}` }
+        server: { baseDir: `./${getDir()}` },
+        notify: false
     });
 
     gulp.watch([`./${options.dirSrc}/**/*.md`, './layout/**/*.cshtml', './partial/**/*.cshtml'], ['metalsmith']);
