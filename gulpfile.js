@@ -26,17 +26,51 @@ let runSequence = require('run-sequence');
 
 let linkGen = require('./util/linkGen');
 
+// **** EVNIRONMENT VARIABLES **** //
+const trueValue = 'YES';
+
+let vars = {
+    DEBUG: 'DEBUG',
+    FORCE_OPTIMIZATION: 'FORCE_OPTIMIZATION'
+};
+
+process.env[vars.DEBUG] = trueValue;
+
+let isDeclared = function (variable) {
+    if (!(variable in vars))
+        throw `Variable ${variable} is not supported`;
+
+    return process.env[variable] && process.env[variable] === trueValue;
+};
+
+let declare = function (variable) {
+    if (!(variable in vars))
+        throw `Variable ${variable} is not supported`;
+
+    process.env[variable] = trueValue;
+};
+
+let revoke = function (variable) {
+    if (!(variable in vars))
+        throw `Variable ${variable} is not supported`;
+
+    if (variable in process.env)
+        process.env[variable] = undefined;
+};
+// **** EVNIRONMENT VARIABLES **** //
+
 let options = {
     dirBuild: '_build',
     dirPublish: '_publish',
     dirSrc: 'src',
     localeDefault: 'ru',
     localeList: ['ru', 'en'],
-    canonical: 'http://www.example.com'
+    // TODO: Change http://www.example.com to real url
+    canonical: isDeclared(vars.DEBUG) ? 'http://localhost:3000' : 'http://www.example.com'
 };
 
 let getDir = function () {
-    return !!process.env.DEBUG ? options.dirBuild : options.dirPublish;
+    return isDeclared(vars.DEBUG) ? options.dirBuild : options.dirPublish;
 };
 
 gulp.task('default', function () {
@@ -49,15 +83,15 @@ gulp.task('metalsmith', function (callback) {
     metalsmith
         .source(`./${options.dirSrc}`)
         .destination(`./${getDir()}`)
-        .clean(!process.env.DEBUG)
+        .clean(!isDeclared(vars.DEBUG))
 
         // Adding environment variables to metadata
         .use(environment())
-        .use(msIf(!!process.env.DEBUG, debugUi.report('environment')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('environment')))
 
         // Adds created and updated attributes to files based on cached information saved in a file
         .use(updated())
-        .use(msIf(!!process.env.DEBUG, debugUi.report('updated')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('updated')))
 
         // Splitting src by localization
         .use(collections({
@@ -66,14 +100,14 @@ gulp.task('metalsmith', function (callback) {
             'root_test_en': `test/*_en.md`,
             'root_test_ru': `test/*_ru.md`
         }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('collections')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('collections')))
 
         // Adding multiple trees for each locale
         .use(multiLanguage({
             default: options.localeDefault,
             locales: options.localeList
         }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('multiLanguage')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('multiLanguage')))
 
         // Adding localization for strings in layouts and partials
         .use(i18n({
@@ -82,17 +116,17 @@ gulp.task('metalsmith', function (callback) {
             directory: 'locales',
             objectNotation: true
         }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('i18n')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('i18n')))
 
         // Compiling markdown to html
         .use(markdownit())
-        .use(msIf(!!process.env.DEBUG, debugUi.report('markdownit')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('markdownit')))
 
         // Compiling partials
         // .use(inPlace({
         //     pattern: ['./layout/**/*.hbs', './partial/**/*.hbs']
         // }))
-        // .use(msIf(!!process.env.DEBUG, debugUi.report('inPlace')))
+        // .use(msIf(isDeclared(vars.DEBUG), debugUi.report('inPlace')))
 
         // Adding links
         .use(permalinks({
@@ -112,7 +146,7 @@ gulp.task('metalsmith', function (callback) {
                 pattern: 'test/:uri/'
             }]
         }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('permalinks')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('permalinks')))
 
         // Compiling layouts
         .use(layout({
@@ -120,24 +154,30 @@ gulp.task('metalsmith', function (callback) {
             default: 'layout.cshtml',
             directory: 'layout'
         }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('layout')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('layout')))
 
         // Minify html output
-        .use(htmlMinifier("*.html", {
-            removeEmptyElements: true,
-            removeEmptyAttributes: true,
-            removeComments: true,
-            removeAttributeQuotes: false,
-            processConditionalComments: false,
-            keepClosingSlash: true
-        }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('htmlMinifier')))
+        .use(msIf(
+            !isDeclared(vars.DEBUG) || (isDeclared(vars.DEBUG) && isDeclared(vars.FORCE_OPTIMIZATION)),
+            htmlMinifier("*.html", {
+                removeEmptyElements: true,
+                removeEmptyAttributes: true,
+                removeComments: true,
+                removeAttributeQuotes: false,
+                processConditionalComments: false,
+                keepClosingSlash: true
+            })
+        ))
+        .use(msIf(
+            isDeclared(vars.DEBUG) && isDeclared(vars.FORCE_OPTIMIZATION),
+            debugUi.report('htmlMinifier')
+        ))
 
         // Add links to use with sitemap
         .use(linkGen({
             propertyCaption: 'sitemapLinks'
         }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('linkGen')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('linkGen')))
 
         // Generating sitemap
         .use(sitemap({
@@ -146,21 +186,21 @@ gulp.task('metalsmith', function (callback) {
             modifiedProperty: 'updated',
             links: 'sitemapLinks'
         }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('sitemap')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('sitemap')))
 
         // Generating robots txt
         .use(robots({
             allow: '/',
             sitemap: `${options.canonical}/sitemap.xml`
         }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('robots')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('robots')))
 
         // Copiyng static assets
         .use(assets({
             source: './assets',
             destination: './assets'
         }))
-        .use(msIf(!!process.env.DEBUG, debugUi.report('assets')))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('assets')))
 
         // Building website
         .build(function (err) {
@@ -175,10 +215,15 @@ gulp.task('less', function () {
     let autoprefix = new LessAutoprefix({ browsers: ['last 3 versions', 'IE 8', '> 0.5%'] });
     let cleanCss = new CleanCss();
 
+    let plugins = 
+        !isDeclared(vars.DEBUG) || (isDeclared(vars.DEBUG) && isDeclared(vars.FORCE_OPTIMIZATION))
+        ? [autoprefix, cleanCss]
+        : [];
+
     return gulp.src('./less/**/*.less')
         .pipe(sourcemaps.init())
         .pipe(less({
-            plugins: [autoprefix, cleanCss]
+            plugins: plugins
         }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(`./${getDir()}/css`));
@@ -195,12 +240,31 @@ gulp.task('serve', ['build'], function () {
     gulp.watch(['./less/**/*.less'], ['less']);
 });
 
+gulp.task('serve-optimize', ['build-optimize'], function () {
+    let browserSync = BrowserSync.create();
+    browserSync.init({
+        server: { baseDir: `./${getDir()}` },
+        notify: false
+    });
+
+    gulp.watch([`./${options.dirSrc}/**/*.md`, './layout/**/*.cshtml', './partial/**/*.cshtml'], ['metalsmith']);
+    gulp.watch(['./less/**/*.less'], ['less']);
+});
+
 gulp.task('build', function (callback) {
-    process.env.DEBUG = 'YES';
+    declare(vars.DEBUG);
+    revoke(vars.FORCE_OPTIMIZATION);
+    runSequence('metalsmith', 'less', callback);
+});
+
+gulp.task('build-optimize', function (callback) {
+    declare(vars.DEBUG);
+    declare(vars.FORCE_OPTIMIZATION);
     runSequence('metalsmith', 'less', callback);
 });
 
 gulp.task('publish', function (callback) {
-    delete process.env.DEBUG;
+    revoke(vars.DEBUG);
+    revoke(vars.FORCE_OPTIMIZATION);
     runSequence('metalsmith', 'less', callback);
 });
