@@ -13,6 +13,7 @@ let multiLanguage = require('metalsmith-multi-language');
 let sitemap = require('metalsmith-sitemap');
 let robots = require('metalsmith-robots');
 let updated = require('metalsmith-updated');
+let htmlMinifier = require('metalsmith-html-minifier');
 
 let gulp = require('gulp');
 let less = require('gulp-less');
@@ -53,7 +54,7 @@ gulp.task('metalsmith', function (callback) {
         // Adding environment variables to metadata
         .use(environment())
         .use(msIf(!!process.env.DEBUG, debugUi.report('environment')))
-        
+
         // Adds created and updated attributes to files based on cached information saved in a file
         .use(updated())
         .use(msIf(!!process.env.DEBUG, debugUi.report('updated')))
@@ -120,6 +121,17 @@ gulp.task('metalsmith', function (callback) {
             directory: 'layout'
         }))
         .use(msIf(!!process.env.DEBUG, debugUi.report('layout')))
+
+        // Minify html output
+        .use(htmlMinifier("*.html", {
+            removeEmptyElements: true,
+            removeEmptyAttributes: true,
+            removeComments: true,
+            removeAttributeQuotes: false,
+            processConditionalComments: false,
+            keepClosingSlash: true
+        }))
+        .use(msIf(!!process.env.DEBUG, debugUi.report('htmlMinifier')))
 
         // Add links to use with sitemap
         .use(linkGen({
