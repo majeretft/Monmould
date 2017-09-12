@@ -17,6 +17,8 @@ let updated = require('metalsmith-updated');
 let gulp = require('gulp');
 let less = require('gulp-less');
 let sourcemaps = require('gulp-sourcemaps');
+let LessAutoprefix = require('less-plugin-autoprefix');
+let CleanCss = require('less-plugin-clean-css');
 
 let BrowserSync = require('browser-sync');
 let runSequence = require('run-sequence');
@@ -158,9 +160,14 @@ gulp.task('metalsmith', function (callback) {
 });
 
 gulp.task('less', function () {
+    let autoprefix = new LessAutoprefix({ browsers: ['last 3 versions', 'IE 8', '> 0.5%'] });
+    let cleanCss = new CleanCss();
+
     return gulp.src('./less/**/*.less')
         .pipe(sourcemaps.init())
-        .pipe(less())
+        .pipe(less({
+            plugins: [autoprefix, cleanCss]
+        }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(`./${getDir()}/css`));
 });

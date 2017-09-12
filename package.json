@@ -15,6 +15,8 @@
     "gulp-sourcemaps": "^2.6.0",
     "handlebars": "^4.0.10",
     "jstransformer-handlebars": "^1.0.0",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
     "metalsmith": "^2.3.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-collections": "^0.9.0",
