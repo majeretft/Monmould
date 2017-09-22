@@ -25,6 +25,7 @@ let BrowserSync = require('browser-sync');
 let runSequence = require('run-sequence');
 
 let linkGen = require('./util/linkGen');
+let breadcrumbGen = require('./util/breadcrumbGen');
 
 // **** EVNIRONMENT VARIABLES **** //
 const trueValue = 'YES';
@@ -97,8 +98,8 @@ gulp.task('metalsmith', function (callback) {
         .use(collections({
             'root_en': `*_en.md`,
             'root_ru': `*_ru.md`,
-            'root_test_en': `test/*_en.md`,
-            'root_test_ru': `test/*_ru.md`
+            'root_portfolio_en': `portfolio/*_en.md`,
+            'root_portfolio_ru': `portfolio/*_ru.md`
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('collections')))
 
@@ -139,14 +140,18 @@ gulp.task('metalsmith', function (callback) {
                 match: { collection: 'root_ru' },
                 pattern: ':uri/'
             }, {
-                match: { collection: 'root_test_en' },
-                pattern: ':locale/test/:uri/'
+                match: { collection: 'root_portfolio_en' },
+                pattern: ':locale/portfolio/:uri/'
             }, {
-                match: { collection: 'root_test_ru' },
-                pattern: 'test/:uri/'
+                match: { collection: 'root_portfolio_ru' },
+                pattern: 'portfolio/:uri/'
             }]
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('permalinks')))
+
+        // Add links to use with sitemap
+        .use(breadcrumbGen())
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('breadcrumbGen')))
 
         // Compiling layouts
         .use(layout({
@@ -215,10 +220,10 @@ gulp.task('less', function () {
     let autoprefix = new LessAutoprefix({ browsers: ['last 3 versions', 'IE 8', '> 0.5%'] });
     let cleanCss = new CleanCss();
 
-    let plugins = 
+    let plugins =
         !isDeclared(vars.DEBUG) || (isDeclared(vars.DEBUG) && isDeclared(vars.FORCE_OPTIMIZATION))
-        ? [autoprefix, cleanCss]
-        : [];
+            ? [autoprefix, cleanCss]
+            : [];
 
     return gulp.src('./less/**/*.less')
         .pipe(sourcemaps.init())

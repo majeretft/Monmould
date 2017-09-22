@@ -1,0 +1,57 @@
+@{
+    let lookup = function(breadcrumbsTree, breadcrumbIndex, path) {
+        if (!breadcrumbsTree) {
+            return [];
+        };
+
+        let pathParts = path.split('/');
+        pathParts.length = pathParts.length - 1;
+
+        let node = breadcrumbsTree;
+        pathParts.forEach(function(pathPart) {
+            let data = node[pathPart];
+            if (!data)
+                return;
+            node = node[pathPart];
+        });
+
+        let result = [];
+        if (!node || !node[breadcrumbIndex]){
+            return result;
+        }
+
+        let x = node[breadcrumbIndex];
+        let readParent = function(node, result) {
+            if (node.parent){
+                readParent(node.parent, result);
+            };
+
+            result.push({
+                path: node.path,
+                title: node.title
+            });
+        };
+
+        readParent(x, result);
+
+        return result;
+    };
+
+    if (model.breadcrumbs && model.breadcrumbIndex && model.path) {
+        let breadcrumns = lookup(model.breadcrumbs, model.breadcrumbIndex, model.path);
+        if (breadcrumns && breadcrumns.length > 1) {
+            <ol class="breadcrumb">
+                @breadcrumns.forEach(function(b) {
+                    if (b.path === model.path) {
+                        <li class="active">@model.title</li>
+                    } else {
+                        <li>
+                            <a href="/@b.path">@b.title</a>
+                        </li>
+                    }
+                })
+            </ol>
+            <div>@html.raw(JSON.stringify(breadcrumns))</div>
+        }
+    };
+}
