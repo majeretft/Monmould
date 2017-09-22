@@ -6,3 +6,5 @@ changefreq: "monthly"
 ---
 
 ## Portfolio
+
+[See X](/en/portfolio/x/ "Option X")
