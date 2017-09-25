@@ -8,7 +8,6 @@ let debugUi = require('metalsmith-debug-ui');
 let permalinks = require('metalsmith-permalinks');
 let msIf = require('metalsmith-if');
 let inPlace = require('metalsmith-in-place');
-let i18n = require('metalsmith-i18n');
 let multiLanguage = require('metalsmith-multi-language');
 let sitemap = require('metalsmith-sitemap');
 let robots = require('metalsmith-robots');
@@ -26,6 +25,7 @@ let runSequence = require('run-sequence');
 
 let linkGen = require('./util/linkGen');
 let breadcrumbGen = require('./util/breadcrumbGen');
+let i18n = require('./util/localizationHelper');
 
 // **** EVNIRONMENT VARIABLES **** //
 const trueValue = 'YES';
