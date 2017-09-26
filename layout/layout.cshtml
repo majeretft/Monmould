@@ -24,6 +24,7 @@
 
     <div class="container">
         @html.include("partial/breadcrumb.cshtml", model)
+        @html.include("partial/availableIn.cshtml", model)
         @html.raw(model.contents)
     </div>
 
