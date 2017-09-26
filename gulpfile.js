@@ -96,10 +96,10 @@ gulp.task('metalsmith', function (callback) {
 
         // Splitting src by localization
         .use(collections({
-            'root_en': `*_en.md`,
-            'root_ru': `*_ru.md`,
-            'root_portfolio_en': `portfolio/*_en.md`,
-            'root_portfolio_ru': `portfolio/*_ru.md`
+            'root_en': '*_en.*',
+            'root_ru': '*_ru.*',
+            'root_portfolio_en': 'portfolio/*_en.*',
+            'root_portfolio_ru': 'portfolio/*_ru.*'
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('collections')))
 
