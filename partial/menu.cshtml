@@ -1,5 +1,8 @@
 <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
+        <div class="clearfix hidden-xs hidden-sm pull-left mm-brand-image">
+            <img alt="Brand" src="/assets/monmould_menu_logo_full.png" class="img-responsive pull-left">
+        </div>
         @* Brand and toggle get grouped for better mobile display *@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -7,13 +10,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand visible-xs" href="/@(model.locale === model.defaultLocale ? '' : model.locale)">
+            <a class="navbar-brand hidden-md hidden-lg" href="/@(model.locale === model.defaultLocale ? '' : model.locale)">
                 <img alt="Brand" src="/assets/monmould_logo_short.png" class="img-responsive">
             </a>
         </div>
 
         @* Collect the nav links, forms, and other content for toggling *@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="mm-brand hidden-xs hidden-sm clearfix">
+                <div class="mm-brand-text pull-left">
+                    <span>近德模塑 Mon Mould</span>
+                </div>
+            </div>
             <ul class="nav navbar-nav">
                 @{
                     var collection = model.collections["root_" + model.locale];

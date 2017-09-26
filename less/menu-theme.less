@@ -1,0 +1,39 @@
+@import (once) './var.less';
+
+.navbar {
+    @border-color: @bs-color-bg-primary;
+    font-weight: bold;
+
+    &.navbar-default {
+        border-color: @border-color;
+        border-bottom-width: 2px;
+    }
+
+    .navbar-brand {
+        padding: 0;
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+
+    @media (min-width: 768px) {
+        .navbar-right {
+            margin-right: 0;
+        }
+    }
+}
+
+.mm-brand-image {
+    padding-top: 5px;
+}
+
+.mm-brand {
+    height: 115px - 50px;
+    padding-top: 15px;
+
+    .mm-brand-text {
+        padding-left: 15px;
+        line-height: 50px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
