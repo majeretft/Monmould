@@ -1,8 +1,16 @@
 @import (once) './var.less';
 
 .navbar {
+    font-size: 16px;
     @border-color: @bs-color-bg-primary;
-    font-weight: bold;
+
+    @media (min-width: @bs-screen-md-min) {
+        & > .container {
+            background-image: url(/assets/mould-assembly.png);
+            background-position: right;
+            background-repeat: no-repeat;
+        }
+    }
 
     &.navbar-default {
         border-color: @border-color;
