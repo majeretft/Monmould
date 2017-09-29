@@ -1,47 +1,39 @@
 @import (once) './var.less';
 
-.navbar {
+.mm-navbar {
+    @border-color: darken(#eee, 10%);
+    @border-shadow-color: darken(@border-color, 5%);
+    @active-color: @bs-color-text-primary;
+    
+    margin-bottom: 15px;
     font-size: 16px;
-    @border-color: @bs-color-bg-primary;
 
-    @media (min-width: @bs-screen-md-min) {
-        & > .container {
-            background-image: url(/assets/mould-assembly.png);
-            background-position: right;
-            background-repeat: no-repeat;
+    border-bottom: 1px solid @border-color;
+    box-shadow: 0 2px 5px 0 @border-shadow-color;
+
+    .navbar-nav > li > a {
+        border-top: 2px solid transparent;
+        color: @bs-color-text-default;
+        transition: background-color 0.15s ease-in, color 0.15s ease-in;
+
+        &:hover {
+            color: #eee;
+            background-color: @bs-color-text-primary;
         }
     }
-
-    &.navbar-default {
-        border-color: @border-color;
-        border-bottom-width: 2px;
-    }
-
-    .navbar-brand {
-        padding: 0;
-        padding-top: 5px;
-        padding-right: 5px;
+    
+    .navbar-nav > li.active > a {
+        border-top-color: @active-color;
+        color: @active-color;
+        
+        &:hover {
+            color: #eee;
+        }
     }
 
     @media (min-width: 768px) {
         .navbar-right {
             margin-right: 0;
         }
-    }
-}
-
-.mm-brand-image {
-    padding-top: 5px;
-}
-
-.mm-brand {
-    height: 115px - 50px;
-    padding-top: 15px;
-
-    .mm-brand-text {
-        padding-left: 15px;
-        line-height: 50px;
-        font-size: 30px;
-        font-weight: bold;
     }
 }
