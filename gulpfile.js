@@ -8,7 +8,6 @@ let debugUi = require('metalsmith-debug-ui');
 let permalinks = require('metalsmith-permalinks');
 let msIf = require('metalsmith-if');
 let inPlace = require('metalsmith-in-place');
-let multiLanguage = require('metalsmith-multi-language');
 let sitemap = require('metalsmith-sitemap');
 let robots = require('metalsmith-robots');
 let updated = require('metalsmith-updated');
@@ -26,6 +25,7 @@ let runSequence = require('run-sequence');
 let linkGen = require('./util/linkGen');
 let breadcrumbGen = require('./util/breadcrumbGen');
 let i18n = require('./util/localizationHelper');
+let multiLanguage = require('./util/localizationCollectionHelper');
 
 // **** EVNIRONMENT VARIABLES **** //
 const trueValue = 'YES';
@@ -99,7 +99,7 @@ gulp.task('metalsmith', function (callback) {
             'root_en': '*_en.*',
             'root_ru': '*_ru.*',
             'root_portfolio_en': 'portfolio/*_en.*',
-            'root_portfolio_ru': 'portfolio/*_ru.*'
+            'root_portfolio_ru': 'portfolio/*_ru.*',
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('collections')))
 
@@ -120,7 +120,9 @@ gulp.task('metalsmith', function (callback) {
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('i18n')))
 
         // Compiling markdown to html
-        .use(markdownit())
+        .use(markdownit({
+            'html': true
+        }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('markdownit')))
 
         // Compiling partials
@@ -241,7 +243,7 @@ gulp.task('serve', ['build'], function () {
         notify: false
     });
 
-    gulp.watch([`./${options.dirSrc}/**/*.md`, './layout/**/*.cshtml', './partial/**/*.cshtml'], ['metalsmith']);
+    gulp.watch([`./${options.dirSrc}/**/*`, './layout/**/*.cshtml', './partial/**/*.cshtml'], ['metalsmith']);
     gulp.watch(['./less/**/*.less'], ['less']);
 });
 
