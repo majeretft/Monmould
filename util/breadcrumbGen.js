@@ -10,7 +10,7 @@ let path = require('path');
 module.exports = function plugin() {
 
     let sep = path.sep;
-    let index = 'index.html';
+    let indexRegex = /index\x2E[a-zA-Z]+/;
 
     return function (files, metalsmith, done) {
         let copy = {};
@@ -47,14 +47,14 @@ module.exports = function plugin() {
         let setParent = function (node, parentNode) {
             // for all index pages
             Object.keys(node).forEach(function (nodeIndex) {
-                if (nodeIndex !== index)
+                if (!indexRegex.test(nodeIndex))
                     return;
                 node[nodeIndex].parent = parentNode && parentNode[index] ? parentNode[index] : null;
             });
 
             // for other dirs
             Object.keys(node).forEach(function (nodeNotIndex) {
-                if (nodeNotIndex === index)
+                if (indexRegex.test(nodeNotIndex))
                     return;
 
                 let parent = isLocale(nodeNotIndex) ? null : node;
