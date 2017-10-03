@@ -1,7 +1,9 @@
 @{
     let lookup = function(breadcrumbsTree, breadcrumbIndex, path) {
-        if (!breadcrumbsTree) {
-            return [];
+        let result = [];
+
+        if (!breadcrumbsTree || !breadcrumbIndex || !path) {
+            return result;
         };
 
         let pathParts = path.split('/');
@@ -10,21 +12,32 @@
         let node = breadcrumbsTree;
         pathParts.forEach(function(pathPart) {
             let data = node[pathPart];
-            if (!data)
+            if (!data) {
                 return;
+            }
             node = node[pathPart];
         });
 
-        let result = [];
-        if (!node || !node[breadcrumbIndex]){
+        if (!node) {
             return result;
         }
 
-        let x = node[breadcrumbIndex];
+        let indexKey = null;
+        for (let key in node) {
+            if (breadcrumbIndex.test(key)) {
+                indexKey = key;
+            }
+        }
+
+        if (!indexKey) {
+            return result;
+        }
+
+        let x = node[indexKey];
         let readParent = function(node, result) {
-            if (node.parent){
+            if (node.parent) {
                 readParent(node.parent, result);
-            };
+            }
 
             result.push({
                 path: node.path,
@@ -37,12 +50,12 @@
         return result;
     };
 
-    if (model.breadcrumbs && model.breadcrumbIndex && model.path) {
-        let breadcrumns = lookup(model.breadcrumbs, model.breadcrumbIndex, model.path);
-        if (breadcrumns && breadcrumns.length > 1) {
+    if (model.breadcrumbs && model.breadcrumbIndexRegex && model.path) {
+        let breadcrumbs = lookup(model.breadcrumbs, model.breadcrumbIndexRegex, model.path);
+        if (breadcrumbs && breadcrumbs.length > 1) {
             <nav>
                 <ol class="breadcrumb">
-                    @breadcrumns.forEach(function(b) {
+                    @breadcrumbs.forEach(function(b) {
                         if (b.path === model.path) {
                             <li class="active">@model.title</li>
                         } else {

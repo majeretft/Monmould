@@ -9,12 +9,16 @@ let path = require('path');
  */
 module.exports = function plugin() {
 
+    // Obtain platform specific path separator
     let sep = path.sep;
-    let indexRegex = /index\x2E[a-zA-Z]+/;
+    // Regex to check if a key is index
+    let indexRegex = /^index\x2E[a-zA-Z]+/m;
 
     return function (files, metalsmith, done) {
+        // Copy of files. It is plugin result
         let copy = {};
 
+        // Fill breadcrumbs tree
         Object.keys(files).forEach(function (file) {
             let arr = file.split(sep);
 
@@ -30,6 +34,7 @@ module.exports = function plugin() {
             lvl.title = files[file].title;
         });
 
+        // Check is node is localized (not default locale)
         let isLocale = function (node) {
             if (!metalsmith._metadata.locales)
                 return;
@@ -44,30 +49,45 @@ module.exports = function plugin() {
             return result;
         }
 
-        let setParent = function (node, parentNode) {
+        // Add parent to each node in previously filled breadcrumbs tree
+        // Takes current node, parent node and parent node index key
+        let setParent = function (node, parentNode, parentIndex) {
+            let nextParentIndex = null;
+
             // for all index pages
             Object.keys(node).forEach(function (nodeIndex) {
+                // Check if it is index
                 if (!indexRegex.test(nodeIndex))
                     return;
-                node[nodeIndex].parent = parentNode && parentNode[index] ? parentNode[index] : null;
+
+                // Prepare index key for next iteration
+                nextParentIndex = nodeIndex;
+                // Set current node parent using parent index key
+                node[nodeIndex].parent = parentNode && parentIndex && parentNode[parentIndex] 
+                    ? parentNode[parentIndex] 
+                    : null;
             });
 
-            // for other dirs
+            // for other pages
             Object.keys(node).forEach(function (nodeNotIndex) {
+                // Check if it is NOT index
                 if (indexRegex.test(nodeNotIndex))
                     return;
 
+                // Prepare parent for next iteration
                 let parent = isLocale(nodeNotIndex) ? null : node;
+                // Prepare node for next iteration
                 let currentNode = node[nodeNotIndex];
 
-                setParent(currentNode, parent);
+                setParent(currentNode, parent, nextParentIndex);
             });
         };
 
-        setParent(copy, null);
+        setParent(copy, null, null);
 
+        // Assign result
         metalsmith._metadata.breadcrumbs = copy;
-        metalsmith._metadata.breadcrumbIndex = index;
+        metalsmith._metadata.breadcrumbIndexRegex = indexRegex;
 
         done();
     };
