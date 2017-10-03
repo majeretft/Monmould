@@ -1,21 +1,12 @@
-h1, h2, h3, h4, h5, h6 {
-    color: green;
+@import (once) './var.less';
+@import (once) './menu-theme.less';
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.navbar {
-    @border-color: #e7e7e7;
-
-    .nav > li {
-        border-left: 1px solid @border-color;
-
-        &:first-child {
-            border-left: none;
-        }
-    }
-
-    .navbar-brand {
-        padding: 5px;
-    }
+h1, h2, h3, h4, h5, h6 {
+    color: green;
 }
 
 .test {

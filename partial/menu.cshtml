@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar mm-navbar navbar-static-top">
     <div class="container">
         @* Brand and toggle get grouped for better mobile display *@
         <div class="navbar-header">
@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand visible-xs" href="/@(model.locale === model.defaultLocale ? '' : model.locale)">
+            <a class="navbar-brand hidden-md hidden-lg" href="/@(model.locale === model.defaultLocale ? '' : model.locale)">
                 <img alt="Brand" src="/assets/monmould_logo_short.png" class="img-responsive">
             </a>
         </div>
@@ -22,7 +22,9 @@
                     });
 
                     collectionSorted.forEach(function(a) {
-                        <li><a href="/@a.path">@a.title</a></li>
+                        var isActive = a.path === model.path;
+
+                        <li class="@(isActive ? 'active' : '')"><a href="/@a.path">@a.title</a></li>
                     });
                 }
             </ul>
