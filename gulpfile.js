@@ -125,12 +125,6 @@ gulp.task('metalsmith', function (callback) {
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('markdownit')))
 
-        // Compiling partials
-        // .use(inPlace({
-        //     pattern: ['./layout/**/*.hbs', './partial/**/*.hbs']
-        // }))
-        // .use(msIf(isDeclared(vars.DEBUG), debugUi.report('inPlace')))
-
         // Adding links
         .use(permalinks({
             pattern: ':locale/:uri',
@@ -154,6 +148,12 @@ gulp.task('metalsmith', function (callback) {
         // Add links to use with sitemap
         .use(breadcrumbGen())
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('breadcrumbGen')))
+        
+        // Compiling partials
+        // .use(inPlace({
+        //     pattern: ['./src/**/*.cshtml']
+        // }))
+        // .use(msIf(isDeclared(vars.DEBUG), debugUi.report('inPlace')))
 
         // Compiling layouts
         .use(layout({

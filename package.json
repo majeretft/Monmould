@@ -16,6 +16,7 @@
     "handlebars": "^4.0.10",
     "i18n": "^0.8.3",
     "jstransformer-handlebars": "^1.0.0",
+    "jstransformer-vash": "^0.2.0",
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
     "metalsmith": "^2.3.0",
