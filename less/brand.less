@@ -1,0 +1,58 @@
+@import (once) './var.less';
+
+.mm-brand {
+    @width: 198px;
+    @height: 194px;
+
+    width: @width;
+    height: @height;
+    overflow: hidden;
+
+    &.absolute {
+        position: absolute;
+        top: 15px;
+        left: 15px*2;
+    }
+    
+    &.static {
+        margin: 0 auto;
+        margin-top: (262 - @height) / 2;
+    }
+}
+
+.mm-brand-image {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+.mm-brand-caption {
+    display: block;
+    text-align: center;
+    font-size: 0;
+
+    .mm-mon, .mm-mould {
+        padding: 3px 10px;
+        display: inline-block;
+        font-size: 30px;
+        line-height: 30px;
+        border: 1px solid @bs-color-bg-primary;
+    }
+
+    .mm-mon {
+        color: white;
+        background-color: @bs-color-bg-primary;
+    }
+
+    .mm-mould {
+        color: @bs-color-bg-primary;
+        background-color: white;
+    }
+}
+
+.mm-brand-text {
+    font-size: 20px;
+    text-align: center;
+    color: #EC0010;
+    text-transform: uppercase;
+}

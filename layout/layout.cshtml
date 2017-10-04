@@ -11,14 +11,18 @@
 
 <body>
 
-    <header>
-        @html.include("partial/menu.cshtml", model)
-    </header>
+    <div id="wrapper">
+        <header>
+            @html.include("partial/menu.cshtml", model)
+        </header>
 
-    <div>
-        @html.include("partial/breadcrumb.cshtml", model)
-        @html.include("partial/availableIn.cshtml", model)
-        @html.raw(model.contents)
+        <main>
+            @html.include("partial/breadcrumb.cshtml", model)
+            @if (model.permalink !== false) {
+                @html.include("partial/availableIn.cshtml", model)
+            }
+            @html.raw(model.contents)
+        </main>
     </div>
 
     <footer>
