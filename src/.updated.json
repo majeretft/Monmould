@@ -100,5 +100,17 @@
         "hash": "719ce028c490f383f4f5a087ca37a45b",
         "created": "2017-09-26T08:59:17.684Z",
         "updated": "2017-09-26T08:59:17.684Z"
+    },
+    "index_en.html": {
+        "filename": "index_en.html",
+        "hash": "78f98f450928288325d920e2b8af5111",
+        "created": "2017-10-04T11:01:28.807Z",
+        "updated": "2017-10-04T11:01:28.807Z"
+    },
+    "index_ru.html": {
+        "filename": "index_ru.html",
+        "hash": "a52dd36558a1a0aa1320e78510424ea8",
+        "created": "2017-10-04T11:01:34.281Z",
+        "updated": "2017-10-04T11:01:34.281Z"
     }
 }

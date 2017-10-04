@@ -23,8 +23,9 @@
 
                     collectionSorted.forEach(function(a) {
                         var isActive = a.path === model.path;
+                        var text = a.menuTitle ? a.menuTitle : a.title;
 
-                        <li class="@(isActive ? 'active' : '')"><a href="/@a.path">@a.title</a></li>
+                        <li class="@(isActive ? 'active' : '')"><a href="/@a.path">@text</a></li>
                     });
                 }
             </ul>
