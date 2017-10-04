@@ -15,17 +15,19 @@
         @html.include("partial/menu.cshtml", model)
     </header>
 
-    <div class="container">
+    <div>
         @html.include("partial/breadcrumb.cshtml", model)
         @html.include("partial/availableIn.cshtml", model)
         @html.raw(model.contents)
     </div>
 
-    @if(model.DEBUG){
-        <div class="container">
-            <div class="text-right"><a href="/debug-ui/">DEBUG UI</a></div>
-        </div>
-    }
+    <footer>
+        @if(model.DEBUG){
+            <div class="container">
+                <a href="/debug-ui/" class="btn btn-default">DEBUG UI</a>
+            </div>
+        }
+    </footer>
 
     @* Custom font *@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">

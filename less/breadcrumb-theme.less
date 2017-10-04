@@ -1,0 +1,41 @@
+@import (once) './var.less';
+
+.breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    > li {
+        position: relative;
+        padding: 10px 5px 10px 25px;
+        
+        &:first-child {
+            padding-left: 0;
+        }
+
+        & + li:before, & + li:after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: transparent;
+            padding: 0;
+            border: 20px solid transparent;	
+            border-left: 20px solid @bs-color-nav-border;
+        }
+        
+        & + li:after {
+            left: -2px;
+            border-left-color: @bs-color-nav-bg;
+        }
+    }
+}
+
+.breadcrumb-wrap {
+    @border: 1px solid @bs-color-nav-border;
+
+    background-color: @bs-color-nav-bg;
+    border-top: @border;
+    border-bottom: @border;
+}
