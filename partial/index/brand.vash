@@ -1,0 +1,8 @@
+<div class="mm-brand static">
+    <img src="/assets/mm_logo.png" alt="" class="mm-brand-image" />
+    <div class="mm-brand-caption">
+        <span class="mm-mon">Mon</span>
+        <span class="mm-mould">Mould</span>
+    </div>
+    <div class="mm-brand-text">@model.__("brand.slogan")</div>
+</div>

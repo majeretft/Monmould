@@ -115,14 +115,14 @@
     },
     "index_en.html.vash": {
         "filename": "index_en.html.vash",
-        "hash": "7689d7a3de0305c15fbbc0d732a3a4a1",
+        "hash": "30cc47f4222c9d6728bbabce5d148406",
         "created": "2017-10-05T14:37:18.006Z",
-        "updated": "2017-10-05T14:37:18.006Z"
+        "updated": "2017-10-05T14:42:29.783Z"
     },
     "index_ru.html.vash": {
         "filename": "index_ru.html.vash",
-        "hash": "d835307d6d41041d43f470b661602e1c",
+        "hash": "4307a222f41ac19fa0d0d2f13e7b374c",
         "created": "2017-10-05T14:37:18.006Z",
-        "updated": "2017-10-05T14:39:06.336Z"
+        "updated": "2017-10-05T14:42:29.783Z"
     }
 }
