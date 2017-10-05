@@ -150,15 +150,13 @@ gulp.task('metalsmith', function (callback) {
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('breadcrumbGen')))
         
         // Compiling partials
-        // .use(inPlace({
-        //     pattern: ['./src/**/*.cshtml']
-        // }))
-        // .use(msIf(isDeclared(vars.DEBUG), debugUi.report('inPlace')))
+        .use(inPlace())
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('inPlace')))
 
         // Compiling layouts
         .use(layout({
             engine: 'vash',
-            default: 'layout.cshtml',
+            default: 'layout.vash',
             directory: 'layout'
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('layout')))
@@ -243,8 +241,8 @@ gulp.task('serve', ['build'], function () {
         notify: false
     });
 
-    gulp.watch([`./${options.dirSrc}/**/*`, './layout/**/*.cshtml', './partial/**/*.cshtml'], ['metalsmith']);
-    gulp.watch(['./less/**/*.less'], ['less']);
+    gulp.watch([`./${options.dirSrc}/**/*`, './layout/**/*', './partial/**/*'], ['metalsmith']);
+    gulp.watch(['./less/**/*'], ['less']);
 });
 
 gulp.task('serve-optimize', ['build-optimize'], function () {
@@ -254,8 +252,8 @@ gulp.task('serve-optimize', ['build-optimize'], function () {
         notify: false
     });
 
-    gulp.watch([`./${options.dirSrc}/**/*.md`, './layout/**/*.cshtml', './partial/**/*.cshtml'], ['metalsmith']);
-    gulp.watch(['./less/**/*.less'], ['less']);
+    gulp.watch([`./${options.dirSrc}/**/*`, './layout/**/*', './partial/**/*'], ['metalsmith']);
+    gulp.watch(['./less/**/*'], ['less']);
 });
 
 gulp.task('build', function (callback) {

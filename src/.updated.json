@@ -112,5 +112,17 @@
         "hash": "d835307d6d41041d43f470b661602e1c",
         "created": "2017-10-04T11:01:34.281Z",
         "updated": "2017-10-05T11:21:09.955Z"
+    },
+    "index_en.html.vash": {
+        "filename": "index_en.html.vash",
+        "hash": "7689d7a3de0305c15fbbc0d732a3a4a1",
+        "created": "2017-10-05T14:37:18.006Z",
+        "updated": "2017-10-05T14:37:18.006Z"
+    },
+    "index_ru.html.vash": {
+        "filename": "index_ru.html.vash",
+        "hash": "d835307d6d41041d43f470b661602e1c",
+        "created": "2017-10-05T14:37:18.006Z",
+        "updated": "2017-10-05T14:39:06.336Z"
     }
 }
