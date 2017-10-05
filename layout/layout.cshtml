@@ -25,13 +25,10 @@
         </main>
     </div>
 
-    <footer>
-        @if(model.DEBUG){
-            <div class="container">
-                <a href="/debug-ui/" class="btn btn-default">DEBUG UI</a>
-            </div>
-        }
-    </footer>
+    <footer></footer>
+    @if (model.DEBUG) {
+        @html.include("partial/debug.cshtml", model)
+    }
 
     @* Custom font *@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
