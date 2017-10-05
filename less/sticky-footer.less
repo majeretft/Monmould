@@ -1,16 +1,24 @@
 @footer-height: 150px;
 
 html,
-body,
-#wrapper {
+body {
 	height: 100%;
 }
 
-footer {
+#wrapper {
+	min-height: 100%;
+	margin-bottom: -@footer-height;
+	
+	&:after {
+		content: "";
+		display: block;
+	}
+}
+
+footer, #wrapper:after {
 	height: @footer-height;
-	margin-top: -@footer-height;
 }
 
 main {
-	padding-bottom: @footer-height;
+	// padding-bottom: @footer-height;
 }
