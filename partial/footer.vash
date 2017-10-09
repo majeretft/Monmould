@@ -4,11 +4,11 @@
             <div class="row">
                 <div class="col-lg-3">
                     <h3><img src="/assets/mm_logo.png" alt=""> Mon Mould</h3>
-                    <p>Более 20 лет успешной работы в области проектирования и изготовления пресс-форм</p>
+                    <p>@model.__('footer.brandText')</p>
                     <div class="ya-share2" data-services="facebook,twitter,blogger"></div>
                 </div>
                 <div class="col-lg-6">
-                    <h4>Пресс-формы и изделия</h4>
+                    <h4>@model.__('footer.mouldsAndSamples')</h4>
                     <div class="row">
                         <div class="col-lg-6">
                             <p>3D модели</p>

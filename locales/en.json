@@ -8,5 +8,9 @@
 		"person": "Contact person",
 		"telephone": "Tel",
 		"mainWebsite": "Main website"
+	},
+	"footer": {
+		"brandText": "Over 20 years of excellence in mould design and production",
+		"mouldsAndSamples": "Moulds and samples"
 	}
 }
