@@ -14,6 +14,35 @@ main {
     padding-bottom: 25px;
 }
 
-footer {
+.footer {
     background-color: @bs-color-text-default;
+    color: @bs-color-text-invert;
+
+    .footer-content {
+        padding: 15px 0 0 0;
+
+        h1, h2, h3, h4 {
+            text-transform: uppercase;
+            margin-bottom: 25px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        p, a {
+            color: darken(@bs-color-text-invert, 20%);
+        }
+
+        a:hover, a:focus {
+            color: @bs-color-text-invert;
+            text-decoration: none;
+        }
+    }
+}
+
+.copywrite {
+    background-color: black;
+    color: darken(@bs-color-text-invert, 35%);
+    padding: 10px 0;
 }

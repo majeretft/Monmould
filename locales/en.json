@@ -2,5 +2,11 @@
 	"langName": "English",
 	"brand": {
 		"slogan": "MOULD YOUR IDEAS"
+	},
+	"contact": {
+		"contact": "Contact",
+		"person": "Contact person",
+		"telephone": "Tel",
+		"mainWebsite": "Main website"
 	}
 }

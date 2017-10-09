@@ -25,7 +25,11 @@
         </main>
     </div>
 
-    <footer></footer>
+    @* Yandex share *@
+    <script src="//yastatic.net/share2/share.js"></script>
+
+    @html.include("partial/footer.vash", model)
+    
     @if (model.DEBUG) {
         @html.include("partial/debug.vash", model)
     }

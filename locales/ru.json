@@ -2,5 +2,11 @@
 	"langName": "Русский",
 	"brand": {
 		"slogan": "MOULD YOUR IDEAS"
+	},
+	"contact": {
+		"contact": "Контакты",
+		"person": "Контактное лицо",
+		"telephone": "Телефон",
+		"mainWebsite": "Основной вебсайт"
 	}
 }
