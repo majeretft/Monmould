@@ -32,6 +32,7 @@
                     <p>@model.__('contact.person'): Mr.Fang</p>
                     <p>Email: info@@monmould.com</p>
                     <p>@model.__('contact.telephone'): +86 576 81116831</p>
+                    <p>@model.__('contact.cellphone'): +86 136 56596671</p>
                     <p>Skype: monsteven</p>
                     <p>@model.__('contact.mainWebsite'): <a href="http://monmould.com" target="_blank" hreflang="cn">monmould.com</a></p>
                 </div>

@@ -22,6 +22,7 @@ changefreq: "monthly"
                 </p>
                 <a href="/about-us" class="read-more">Подробнее О Компании</a>
             </div>
+            @html.include("partial/index/contact.vash", model)
         </div>
         <div class="col-lg-9">
             @html.include("partial/index/banner.vash", model)

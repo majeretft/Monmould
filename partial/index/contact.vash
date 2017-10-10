@@ -1,0 +1,9 @@
+<div class="contact-short">
+    <dl>
+        <dt>@model.__('contact.person'): Mr.Fang</dt>
+        <dd>Email: info@@monmould.com</dd>
+        <dd>@model.__('contact.telephone'): +86 576 81116831</dd>
+        <dd>@model.__('contact.cellphone'): +86 136 56596671</dd>
+        <dd>Skype: monsteven</dd>
+    </dl>
+</div>
