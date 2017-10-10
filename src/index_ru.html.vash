@@ -9,9 +9,15 @@ changefreq: "monthly"
 <div class="container">
     <div class="row">
         <div class="col-lg-3">
-            <div class="mm-about-intro mm-brand-static">
-                @html.include("partial/index/brand.vash", model)
-                <hr>
+            <div>
+                <div>
+                    <img src="/assets/mm_logo.png" alt="" class="s-brand-logo"/>
+                    <div class="s-brand-name">
+                        <span>Mon</span>
+                        <span>Mould</span>
+                    </div>
+                    <div>@model.__("brand.slogan")</div>
+                </div>
                 <p>
                     Завод Mon Mould расположен в городе Taizhou и является известным в Китае производителем пресс-форм для литья пластика под
                     давлением.
@@ -20,31 +26,47 @@ changefreq: "monthly"
                     Мы работаем в области производства литьевых форм более 20 лет и уделяем особое внимание литьевым формам для производства
                     бытовых товаров, комплектующих и фитингов.
                 </p>
-                <a href="/about-us" class="read-more">Подробнее О Компании</a>
+                <a href="/about-us">Подробнее О Компании</a>
             </div>
-            @html.include("partial/index/contact.vash", model)
+            <div>
+                <dl>
+                    <dt>@model.__('contact.person'): Mr.Fang</dt>
+                    <dd>Email: info@@monmould.com</dd>
+                    <dd>@model.__('contact.telephone'): +86 576 81116831</dd>
+                    <dd>@model.__('contact.cellphone'): +86 136 56596671</dd>
+                    <dd>Skype: monsteven</dd>
+                </dl>
+            </div>
         </div>
         <div class="col-lg-9">
-            @html.include("partial/index/banner.vash", model)
+            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="8000">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="/assets/banner/1.jpg" alt="...">
+                    </div>
+                    <div class="item">
+                        <img src="/assets/banner/2.jpg" alt="...">
+                    </div>
+                    <div class="item">
+                        <img src="/assets/banner/3.jpg" alt="...">
+                    </div>
+                </div>
+            </div>
             <div class="row">
-                @for (let i = 0; i < 11; i++) {
-                    <div class="col-lg-3">
-                        <h4>Заговолок типа продукции</h4>
-                        <img src="http://via.placeholder.com/350x150" alt="" class="img-responsive">
+                @for (let i = 0; i < 4; i++) {
+                    <div class="col-lg-4">
+                        <div>
+                            <img src="http://via.placeholder.com/500x400" alt="" style="max-width: 100%; display: block;">
+                            <p>Название</p>
+                        </div>
                     </div>
                 }
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-9">
-            <h1 style="font-size: 20px;">Проектирование и производство пресс-форм</h1>
-            <hr>
-            <p>
-                Компания Mon Mould выполняет полный цикл изготовления пресс-форм.
-                Мы производим формы для формирования деталей методами литья под давлением и раздувного формирования.
-            </p>
         </div>
     </div>
 </div>
