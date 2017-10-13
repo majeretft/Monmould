@@ -1,6 +1,181 @@
 @import (once) './var.less';
 @import (once) './mixin.less';
 
-.s-brand-logo {
-
+// layout section
+.content {
+    background-color: white;
+    border: 1px solid #d4d4d4;
+    border-top: none;
+    border-bottom-left-radius: @radius-lg;
+    border-bottom-right-radius: @radius-lg;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.175);
+    padding-bottom: 50px;
 }
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: @color-text-dark;
+    background-color: #eee;
+}
+// ----------------
+
+// lang switcher section
+.lang-list {
+    margin: 0;
+}
+// ------------------
+
+// Lang panel
+.lang-panel {
+    margin-bottom: @margin-after-xs-block;
+    margin-top: @margin-before-xs-block;
+}
+// ------------------
+
+// Contact card
+.contact-card {
+    margin-bottom: @margin-after-block;
+    border-radius: @radius-sm;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.175);
+}
+
+.contact-head {
+    background-color: @color-bg-blue;
+    border-top: none;
+    border-top-left-radius: @radius;
+    border-top-right-radius: @radius;
+    padding: 10px 0;
+}
+
+.contact-head-container {
+    width: 215px;
+
+    .marginn-center();
+}
+
+.contact-logo {
+    width: 70px;
+    display: block;
+}
+
+.contact-logo-text {
+    padding-top: 16px;
+    padding-left: 8px;
+    width: 215px - 70px;
+}
+
+.contact-logo-text-start,
+.contact-logo-text-end {
+    font-size: 22px;
+    padding: 3px 8px;
+}
+
+.contact-logo-text-start {
+    color: white;
+    padding-left: 0;
+}
+
+.contact-logo-text-end {
+    background-color: white;
+    border-radius: @radius-sm;
+}
+
+.contact-slogan {
+    color: #ffba00;
+    font-size: 14px;
+}
+
+.contact-body {
+    border: 1px solid #dadada;
+    border-top: none;
+    border-bottom-left-radius: @radius;
+    border-bottom-right-radius: @radius;
+    padding: 20px 15px;
+}
+
+.contact-list {
+    margin-bottom: 0;
+
+    dd {
+        margin-bottom: 5px;
+    }
+}
+// ------------------
+
+// About card
+.about-card {
+    margin-bottom: @margin-after-block;
+    border-radius: @radius-sm;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.175);
+    padding: 20px 15px;
+}
+// ------------------
+
+// Navbar
+.navbar-custom {
+    overflow: hidden;
+    padding-bottom: 5px;
+    border-radius: 0;
+    border-bottom: 2px solid @color-bg-blue;
+    margin-bottom: @margin-after-block;
+
+    .navbar-collapse {
+        padding-left: 0;
+    }
+
+    .nav > li {
+        margin-right: 10px;
+    }
+
+    .nav > li > a {
+        border-radius: @radius;
+        color: @color-text-dark;
+
+        &:hover, &:focus {
+            color: @color-text-light;
+            background-color: @color-bg-blue;
+        }
+    }
+
+    .nav > li.active {
+        & > a {
+            color: @color-text-light;
+            background-color: @color-bg-blue;
+        }
+    }
+}
+// ------------------
+
+/* .footer {
+    background-color: @bs-color-text-default;
+    color: @bs-color-text-invert;
+
+    .footer-content {
+        padding: 15px 0 0 0;
+
+        h1, h2, h3, h4 {
+            text-transform: uppercase;
+            margin-bottom: 25px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        p, a {
+            color: darken(@bs-color-text-invert, 20%);
+        }
+
+        a:hover, a:focus {
+            color: @bs-color-text-invert;
+            text-decoration: none;
+        }
+    }
+}
+
+.copywrite {
+    background-color: black;
+    color: darken(@bs-color-text-invert, 35%);
+    padding: 10px 0;
+} */

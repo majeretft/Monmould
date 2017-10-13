@@ -4,6 +4,7 @@ menuTitle: "Главная"
 permalink: false
 menuPosition: 1
 changefreq: "monthly"
+isHomePage: true
 ---
 
 <div class="container">
@@ -67,6 +68,7 @@ changefreq: "monthly"
                     </div>
                 }
             </div>
+            <div style="background: red; overflow: hidden; width: 200px; height: 200px; border-bottom-left-radius: 100%; border-bottom-right-radius: 100%;"></div>
         </div>
     </div>
 </div>

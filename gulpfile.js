@@ -225,7 +225,7 @@ gulp.task('less', function () {
             ? [autoprefix, cleanCss]
             : [];
 
-    return gulp.src('./less/**/*.less')
+    return gulp.src('./less/index.less')
         .pipe(sourcemaps.init())
         .pipe(less({
             plugins: plugins

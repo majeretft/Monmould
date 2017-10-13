@@ -4,6 +4,7 @@ menuTitle: "Home"
 permalink: false
 menuPosition: 1
 changefreq: "monthly"
+isHomePage: true
 ---
 
 <h3>Mon Mould factory</h3>

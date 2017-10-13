@@ -1,18 +1,27 @@
-@bs-color-text-default: #333;
-@bs-color-text-invert: #eee;
-@bs-color-text-primary: #337ab7;
-@bs-color-text-info: #31708f;
-@bs-color-text-success: #3c763d;
+// Color scheme
+@color-text-dark: #333;
+@color-text-dark-fade: lighten(@color-text-dark, 20%);
+@color-text-light: #eee;
 
-@bs-color-nav-border: #e7e7e7;
-@bs-color-nav-bg: #f8f8f8;
+// Background color scheme
+@color-bg-blue: #168de2;
+@color-bg-lightgray: #eee;
 
-@bs-color-bg-primary: #337ab7;
-
+// Bootstrap responsive design toggle
 @bs-screen-sm-min: 768px;
 @bs-screen-md-min: 992px;
 @bs-screen-lg-min: 1200px;
 
-// Staddard margins
-@margin-block: 25px;
-@margin-entity: 15px;
+// Standard margins
+@margin-after-block: 25px;
+@margin-after-sm-block: 15px;
+@margin-after-xs-block: 5px;
+@margin-before-block: 15px;
+@margin-before-sm-block: 5px;
+@margin-before-xs-block: 3px;
+@margin-after-element: @margin-after-sm-block;
+
+// Border radius
+@radius: 4px;
+@radius-lg: 6px;
+@radius-sm: 3px;
