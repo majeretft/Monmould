@@ -33,17 +33,11 @@
                 <div class="col-lg-3">
                     @* Contact card *@
                     <div class="contact-card">
-                        <div class="contact-head">
-                            <div class="clearfix contact-head-container">
-                                <img src="/assets/logo_contact_card.png" alt="" class="pull-left contact-logo">
-                                <div class="pull-left contact-logo-text">
-                                    <div class="clearfix">
-                                        <div class="pull-left contact-logo-text-start">Mon</div>
-                                        <div class="pull-left contact-logo-text-end">Mould</div>
-                                    </div>
-                                    <div class="text-uppercase contact-slogan">Mould your ideas</div>
-                                </div>
-                            </div>
+                        <div class="text-center contact-head">
+                            <span class="contact-logo-text-start">Mon</span>
+                            <img src="/assets/logo_contact_card.png" alt="" class="contact-logo">
+                            <span class="contact-logo-text-end">Mould</spanv>
+                            <div class=" text-uppercase contact-slogan">Mould your ideas</div>
                         </div>
                         <div class="contact-body">
                             <dl class="contact-list">
@@ -66,16 +60,14 @@
                             <hr>
                         </div>
                         <p>
-                            Taizhou Mon Mould is one prominent injection mould maker from China.
-                            Mon contains over 20 years experience in plastic injection Mold,
-                            and keeps focusing on Plastic mould for houseware, Commodity,
-                            Pipe Fittings Mould. 
+                            Завод Mon Mould расположен в городе Taizhou и является известным в Китае производителем пресс-форм для литья пластика под
+                            давлением.
                         </p>
                         <p>
-                            We use the latest moulds software,
-                            technology to built best mould to satisfy our customers.
+                            Мы работаем в области производства литьевых форм более 20 лет и уделяем особое внимание литьевым формам для производства
+                            бытовых товаров, комплектующих и фитингов.
                         </p>
-                        <a href="/about-us" class="read-more">More about us</a>
+                        <a href="/about-us" class="text-uppercase read-more">Подробнее О Компании</a>
                     </div>
                     @* / About *@
                 </div>

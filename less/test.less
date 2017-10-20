@@ -45,44 +45,26 @@ body {
     border-top: none;
     border-top-left-radius: @radius;
     border-top-right-radius: @radius;
-    padding: 10px 0;
-}
-
-.contact-head-container {
-    width: 215px;
-
-    .marginn-center();
+    padding: 10px 10px 4px;
 }
 
 .contact-logo {
-    width: 70px;
-    display: block;
-}
-
-.contact-logo-text {
-    padding-top: 16px;
-    padding-left: 8px;
-    width: 215px - 70px;
+    width: 40px;
+    display: inline-block;
+    margin: 0 4px;
 }
 
 .contact-logo-text-start,
 .contact-logo-text-end {
     font-size: 22px;
-    padding: 3px 8px;
-}
-
-.contact-logo-text-start {
+    display: inline-block;
+    vertical-align: text-top;
     color: white;
-    padding-left: 0;
-}
-
-.contact-logo-text-end {
-    background-color: white;
-    border-radius: @radius-sm;
 }
 
 .contact-slogan {
-    color: #ffba00;
+    margin-top: 2px;
+    color: #ffc000;
     font-size: 14px;
 }
 
@@ -110,12 +92,42 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.175);
     padding: 20px 15px;
 }
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    position: relative;
+    color: @color-text-green;
+    
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 16px;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        right: -20px;
+        top: 4px;
+        border: 5px solid transparent;	
+        border-left: 6px solid @color-text-green;
+    }
+
+    &:hover, &:focus {
+        text-decoration: none;
+        color: @color-text-lightgreen;
+
+        &:after {
+            border-left-color: @color-text-lightgreen;
+        }
+    }
+}
 // ------------------
 
 // Navbar
 .navbar-custom {
     overflow: hidden;
-    padding-bottom: 5px;
+    border: none;
     border-radius: 0;
     border-bottom: 2px solid @color-bg-blue;
     margin-bottom: @margin-after-block;
@@ -129,7 +141,8 @@ body {
     }
 
     .nav > li > a {
-        border-radius: @radius;
+        border-top-left-radius: @radius;
+        border-top-right-radius: @radius;
         color: @color-text-dark;
 
         &:hover, &:focus {
