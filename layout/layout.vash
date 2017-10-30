@@ -12,96 +12,137 @@
 <body>
 
     <div class="container content">
-        <header>
-            <div class="row lang-panel">
-                <div class="col-lg-offset-10 col-lg-2">
-                    @* Переключатель языка *@
-                    <nav class="clearfix">
-                        <ul class="pull-right list-inline lang-list">
-                            <li>
-                                <a href="#" hreflang="ru" class="btn btn-link btn-xs">Русский</a>
-                            </li>
-                            <li>
-                                <a href="#" hreflang="en" class="btn btn-link btn-xs">English</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    @* / Переключатель языка *@
-                </div>
+        <div class="row lang-panel">
+            <div class="col-lg-offset-10 col-lg-2">
+                @* Переключатель языка *@
+                <nav class="clearfix">
+                    <ul class="pull-right list-inline lang-list">
+                        <li>
+                            <a href="#" hreflang="ru" class="btn btn-link btn-xs">Русский</a>
+                        </li>
+                        <li>
+                            <a href="#" hreflang="en" class="btn btn-link btn-xs">English</a>
+                        </li>
+                    </ul>
+                </nav>
+                @* / Переключатель языка *@
             </div>
-            <div class="row">
-                <div class="col-lg-3">
-                    @* Contact card *@
-                    <div class="contact-card">
-                        <div class="text-center contact-head">
-                            <span class="contact-logo-text-start">Mon</span>
-                            <img src="/assets/logo_contact_card.png" alt="" class="contact-logo">
-                            <span class="contact-logo-text-end">Mould</spanv>
-                            <div class=" text-uppercase contact-slogan">Mould your ideas</div>
-                        </div>
-                        <div class="contact-body">
-                            <dl class="contact-list">
-                                <dt>Контактное лицо:</dt>
-                                <dd>Mr. Fang</dd>
-                                <dt>Email:</dt>
-                                <dd>info@@monmould.com</dd>
-                                <dt>Телефон:</dt>
-                                <dd>+86 576 81116831</dd>
-                                <dt>Мобильный телефон:</dt>
-                                <dd>+86 136 56596671</dd>
-                            </dl>
-                        </div>
+        </div>
+        <div class="row">
+            <aside class="col-lg-3">
+                @* Contact card *@
+                <div class="contact-card">
+                    <div class="text-center contact-head">
+                        <img src="/assets/logo_contact_card.png" class="contact-logo">
+                        <span class="contact-logo-text-start">Mon</span>
+                        <span class="contact-logo-text-end">Mould</spanv>
+                        <div class=" text-uppercase contact-slogan">Mould your ideas</div>
+                        <hr>
                     </div>
-                    @* / Contact card *@
-                    @* About *@
-                    <div class="about-card">
-                        <div>
-                            <h3 style="margin-top: 0;">О Компании</h3>
-                            <hr>
-                        </div>
-                        <p>
-                            Завод Mon Mould расположен в городе Taizhou и является известным в Китае производителем пресс-форм для литья пластика под
-                            давлением.
-                        </p>
-                        <p>
-                            Мы работаем в области производства литьевых форм более 20 лет и уделяем особое внимание литьевым формам для производства
-                            бытовых товаров, комплектующих и фитингов.
-                        </p>
-                        <a href="/about-us" class="text-uppercase read-more">Подробнее О Компании</a>
+                    <div class="contact-body">
+                        <dl class="contact-list">
+                            <dt>Контактное лицо:</dt>
+                            <dd>Mr. Fang</dd>
+                            <dt>Email:</dt>
+                            <dd>info@@monmould.com</dd>
+                            <dt>Телефон:</dt>
+                            <dd>+86 576 81116831</dd>
+                            <dt>Мобильный телефон:</dt>
+                            <dd>+86 136 56596671</dd>
+                        </dl>
                     </div>
-                    @* / About *@
                 </div>
-                <div class="col-lg-9">
-                    @* Navbar *@
-                    <nav class="navbar navbar-custom">
-                        <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        </div>
-                        <div class="collapse navbar-collapse" id="navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Главная</a></li>
-                            <li><a href="#">О Компании</a></li>
-                            <li><a href="#">Продукция и технологии</a></li>
-                            <li><a href="#">Портфолио</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                        </div>
-                    </nav>
-                    @* / Navbar *@
+                @* / Contact card *@
+                @* About *@
+                <div class="about-card">
+                    <div>
+                        <h3 style="margin-top: 0;">О Компании</h3>
+                        <hr>
+                    </div>
+                    <p>
+                        Завод Mon Mould расположен в городе Taizhou и является известным в Китае производителем пресс-форм для литья пластика под
+                        давлением.
+                    </p>
+                    <p>
+                        Мы работаем в области производства литьевых форм более 20 лет и уделяем особое внимание литьевым формам для производства
+                        бытовых товаров, комплектующих и фитингов.
+                    </p>
+                    <a href="/about-us" class="text-uppercase read-more">Подробнее О Компании</a>
+                </div>
+                @* / About *@
+            </aside>
+            <div class="col-lg-9">
+                @* Navbar *@
+                <nav class="navbar navbar-custom">
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Главная</a></li>
+                        <li><a href="#">О Компании</a></li>
+                        <li><a href="#">Продукция и технологии</a></li>
+                        <li><a href="#">Портфолио</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    </div>
+                </nav>
+                @* / Navbar *@
+                <div class="banner">
                     @* Banner *@
-                        <img src="/assets/banner/2.jpg" alt="" class="img-responsive img-rounded">
+                    <img src="http://placekitten.com/1600/400" alt="" class="img-responsive img-rounded">
                     @* / Banner *@
+                    @* Page Header *@
+                    <h1 class="text-center caption">Проектирование и производство пресс-форм</h1>
+                    @* / Page Header *@
+                </div>
+                <main>
+                
+                </main>
+            </div>
+        </div>  
+        <footer>
+            <div class="row footer-content">
+                <div class="col-lg-6">
+                    <h4 class="footer-header">@model.__('footer.mouldsAndSamples')</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>3D модели</p>
+                            <p>Пресс-формы для двухцветного литья</p>
+                            <p>Пресс-формы</p>
+                            <p>Стулья</p>
+                            <p>Изделия для автомобилей</p>
+                            <p>Изделия для дома</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>Контейнеры и тара</p>
+                            <p>Крышки и преформы</p>
+                            <p>Комплектующие для электрики</p>
+                            <p>ПВХ фитинги</p>
+                            <p>ПП фитинги</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="footer-header">@model.__('contact.contact')</h4>
+                    <p>@model.__('contact.person'): Mr.Fang</p>
+                    <p>Email: info@@monmould.com</p>
+                    <p>@model.__('contact.telephone'): +86 576 81116831</p>
+                    <p>@model.__('contact.cellphone'): +86 136 56596671</p>
+                    <p>Skype: monsteven</p>
+                    <p>@model.__('contact.mainWebsite'): <a href="http://monmould.com" target="_blank" hreflang="cn">monmould.com</a></p>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="footer-header"><img src="/assets/mm_logo.png" alt="" class="footer-logo"> Mon Mould</h3>
+                    <p>@model.__('footer.brandText')</p>
+                    <div class="ya-share2" data-services="facebook,twitter,blogger"></div>
                 </div>
             </div>
-        </header>
-
-        <main>
-
-        </main>
+        </footer>
 
         @* Yandex share *@
         <script src="//yastatic.net/share2/share.js"></script>
@@ -112,6 +153,7 @@
             @html.include("partial/debug.vash", model)
         } *@
     </div>
+    <div class="container text-center copywrite">&copy; since 1996 Taizhou Huangyan Mon Mould Factory</div>
 
     @* Custom font *@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">

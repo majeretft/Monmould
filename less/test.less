@@ -10,13 +10,13 @@
     border-bottom-right-radius: @radius-lg;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.175);
-    padding-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: @color-text-dark;
-    background-color: #eee;
+    background-color: @color-bg-lightgray;
 }
 // ----------------
 
@@ -36,44 +36,53 @@ body {
 // Contact card
 .contact-card {
     margin-bottom: @margin-after-block;
-    border-radius: @radius-sm;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.175);
+    border-top: none;
+    border-bottom-left-radius: @radius;
+    border-bottom-right-radius: @radius;
 }
 
 .contact-head {
-    background-color: @color-bg-blue;
     border-top: none;
     border-top-left-radius: @radius;
     border-top-right-radius: @radius;
-    padding: 10px 10px 4px;
+    padding: 0 10px;
+    font-size: 0;
 }
 
 .contact-logo {
-    width: 40px;
-    display: inline-block;
-    margin: 0 4px;
+    width: 80px;
+    display: block;
+    margin-bottom: 10px;
+
+    .marginn-center();
 }
 
 .contact-logo-text-start,
 .contact-logo-text-end {
-    font-size: 22px;
+    padding: 4px 8px;
+    font-size: 24px;
     display: inline-block;
     vertical-align: text-top;
+    background-color: white;
+    color: @color-text-blue;
+    border: 1px solid @color-bg-blue;
+}
+
+.contact-logo-text-end {
+    background-color: @color-bg-blue;
     color: white;
 }
 
 .contact-slogan {
     margin-top: 2px;
-    color: #ffc000;
     font-size: 14px;
+    color: @color-text-green;
+    font-weight: bold;
 }
 
 .contact-body {
-    border: 1px solid #dadada;
-    border-top: none;
-    border-bottom-left-radius: @radius;
-    border-bottom-right-radius: @radius;
-    padding: 20px 15px;
+    padding: 0 15px 20px;
 }
 
 .contact-list {
@@ -144,6 +153,7 @@ body {
         border-top-left-radius: @radius;
         border-top-right-radius: @radius;
         color: @color-text-dark;
+        transition: color ease-out 0.25s, background-color ease-out 0.25s;
 
         &:hover, &:focus {
             color: @color-text-light;
@@ -160,35 +170,51 @@ body {
 }
 // ------------------
 
-/* .footer {
-    background-color: @bs-color-text-default;
-    color: @bs-color-text-invert;
+// Banner
+.banner {
+    position: relative;
+    
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 15%;
+        right: 15%;
 
-    .footer-content {
-        padding: 15px 0 0 0;
+        padding: 10px;
+        font-size: 24px;
+        line-height: 28px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: @color-text-light;
+        border-radius: @radius-sm;
+    }
+}
+// ------------------
 
-        h1, h2, h3, h4 {
-            text-transform: uppercase;
-            margin-bottom: 25px;
+// Footer
+.footer-content {
+    background-color: @color-bg-black;
+    padding: 20px 15px;
+    color: darken(@color-text-light, 10%);
 
-            img {
-                width: 40px;
-            }
-        }
-
-        p, a {
-            color: darken(@bs-color-text-invert, 20%);
-        }
-
-        a:hover, a:focus {
-            color: @bs-color-text-invert;
-            text-decoration: none;
-        }
+    a {
+        .a(lighten(@color-text-blue, 30%), lighten(@color-text-blue, 20%), lighten(@color-text-blue, 20%), underline);
     }
 }
 
+.footer-header {
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer-logo {
+    width: 50px;
+}
+// ------------------
+
+// Copywrite
 .copywrite {
-    background-color: black;
-    color: darken(@bs-color-text-invert, 35%);
-    padding: 10px 0;
-} */
+    margin-bottom: 10px;
+    color: darken(@color-text-light, 20%);
+}
+// ------------------
