@@ -56,7 +56,7 @@ let revoke = function (variable) {
         throw `Variable ${variable} is not supported`;
 
     if (variable in process.env)
-        process.env[variable] = undefined;
+        delete process.env[variable];
 };
 // **** EVNIRONMENT VARIABLES **** //
 
