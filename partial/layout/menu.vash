@@ -1,0 +1,28 @@
+@* Navbar *@
+<nav class="navbar navbar-custom">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+        <ul class="nav navbar-nav">
+            @{
+                var collection = model.collections["root_" + model.locale];
+                var collectionSorted = collection.sort(function(a, b) { 
+                    return a.menuPosition - b.menuPosition;
+                });
+
+                collectionSorted.forEach(function(a) {
+                    var isActive = a.path === model.path;
+                    var text = a.menuTitle ? a.menuTitle : a.title;
+
+                    <li class="@(isActive ? 'active' : '')"><a href="/@a.path">@text</a></li>
+                });
+            }
+        </ul>
+    </div>
+</nav>
+@* / Navbar *@

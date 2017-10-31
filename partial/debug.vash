@@ -1,7 +1,7 @@
 <style>
     .mm-debug {
         background-color: #000;
-        padding: 10px;
+        padding: 10px 0;
         color: beige;
     }
 
@@ -14,8 +14,8 @@
     }
 </style>
 
-<div class=" mm-debug">
-    <div class="container">
+<div class="row mm-debug">
+    <div class="col-xs-12">
         Go read <a href="/debug-ui/">DEBUG UI</a> plugin metadata!
     </div>
 </div>

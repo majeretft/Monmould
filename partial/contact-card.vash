@@ -1,0 +1,25 @@
+@* Contact card *@
+<div class="contact-card">
+    <div class="text-center contact-head">
+        <img src="/assets/logo_contact_card.png" class="contact-logo">
+        <span class="contact-logo-text-start">Mon</span>
+        <span class="contact-logo-text-end">Mould</spanv>
+        <div class=" text-uppercase contact-slogan">@model.__('brand.slogan')</div>
+        <hr>
+    </div>
+    <div class="contact-body">
+        <dl class="contact-list">
+            <dt>@model.__('contact.person'):</dt>
+            <dd>Mr. Fang</dd>
+            <dt>Email:</dt>
+            <dd>info@@monmould.com</dd>
+            <dt>@model.__('contact.telephone'):</dt>
+            <dd>+86 576 81116831</dd>
+            <dt>@model.__('contact.cellphone'):</dt>
+            <dd>+86 136 56596671</dd>
+            <dt>Skype:</dt>
+            <dd>monsteven</dd>
+        </dl>
+    </div>
+</div>
+@* / Contact card *@

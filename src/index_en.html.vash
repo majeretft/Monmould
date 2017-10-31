@@ -5,17 +5,7 @@ permalink: false
 menuPosition: 1
 changefreq: "monthly"
 isHomePage: true
+layout: layout-index.vash
 ---
 
-<h3>Mon Mould factory</h3>
-<p>
-    Taizhou Mon Mould is one prominent injection mould maker from China.
-    Mon contains over 20 years experience in plastic injection Mold,
-    and keeps focusing on Plastic mould for houseware, Commodity,
-    Pipe Fittings Mould. 
-</p>
-<p>
-    We use the latest moulds software,
-    technology to built best mould to satisfy our customers.
-</p>
-<a href="/about-us" class="read-more">More about us</a>
+<h1>Hello World!</h1>

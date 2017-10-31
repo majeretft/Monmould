@@ -1,0 +1,8 @@
+<div class="banner">
+    @* Banner *@
+    <img src="http://placekitten.com/1600/400" alt="" class="img-responsive img-rounded">
+    @* / Banner *@
+    @* Page Header *@
+    <h1 class="text-center caption">@model.__('home.mainHeader')</h1>
+    @* / Page Header *@
+</div>
