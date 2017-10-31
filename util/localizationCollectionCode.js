@@ -20,8 +20,10 @@ Multilang.prototype.getAltFilename = function (file, fromLocale, toLocale) {
       return file.replace(this.pathPattern, replacementString);
     }
 
+    var regex = new RegExp('\x5F' + fromLocale + '\x2E');
+
     // Locale in the filename.
-    return file.replace('_'+ fromLocale + ext, '_'+ toLocale + ext);
+    return file.replace(regex, '_'+ toLocale + '.');
 };
 
 // Returns the name of the main filename
