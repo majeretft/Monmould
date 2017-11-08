@@ -66,8 +66,7 @@ let options = {
     dirSrc: 'src',
     localeDefault: 'ru',
     localeList: ['ru', 'en'],
-    // TODO: Change http://www.example.com to real url
-    canonical: isDeclared(vars.DEBUG) ? 'http://localhost:3000' : 'http://www.example.com'
+    canonical: 'http://monmold.ru',
 };
 
 let getDir = function () {
@@ -195,8 +194,8 @@ gulp.task('metalsmith', function (callback) {
 
         // Generating robots txt
         .use(robots({
-            allow: '/',
-            sitemap: `${options.canonical}/sitemap.xml`
+            disallow: '/',
+            sitemap: `${isDeclared(vars.DEBUG) ? 'http://localhost:3000' : options.canonical}/sitemap.xml`
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('robots')))
 
