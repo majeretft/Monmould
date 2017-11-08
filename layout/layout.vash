@@ -29,11 +29,11 @@
                 @html.include('partial/layout/menu.vash', model)
                 @html.include('partial/layout/breadcrumb.vash', model)
                 @html.include('partial/layout/availableIn.vash', model)
+                <main>
+                    @html.raw(model.contents)
+                </main>
             </div>
         </div>
-        <main>
-            @html.raw(model.contents)
-        </main>
         <footer>
             @html.include('partial/layout/footer.vash', model)
         </footer>
