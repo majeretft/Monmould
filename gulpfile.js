@@ -32,7 +32,8 @@ const trueValue = 'YES';
 
 let vars = {
     DEBUG: 'DEBUG',
-    FORCE_OPTIMIZATION: 'FORCE_OPTIMIZATION'
+    FORCE_OPTIMIZATION: 'FORCE_OPTIMIZATION',
+    FORCE_CLEAN: 'FORCE_CLEAN'
 };
 
 process.env[vars.DEBUG] = trueValue;
@@ -83,7 +84,7 @@ gulp.task('metalsmith', function (callback) {
     metalsmith
         .source(`./${options.dirSrc}`)
         .destination(`./${getDir()}`)
-        .clean(!isDeclared(vars.DEBUG))
+        .clean(!isDeclared(vars.DEBUG) || isDeclared(vars.FORCE_CLEAN))
 
         // Adding environment variables to metadata
         .use(environment())
@@ -258,17 +259,27 @@ gulp.task('serve-optimize', ['build-optimize'], function () {
 gulp.task('build', function (callback) {
     declare(vars.DEBUG);
     revoke(vars.FORCE_OPTIMIZATION);
+    revoke(vars.FORCE_CLEAN);
     runSequence('metalsmith', 'less', callback);
 });
 
 gulp.task('build-optimize', function (callback) {
     declare(vars.DEBUG);
     declare(vars.FORCE_OPTIMIZATION);
+    revoke(vars.FORCE_CLEAN);
+    runSequence('metalsmith', 'less', callback);
+});
+
+gulp.task('build-clean', function (callback) {
+    declare(vars.DEBUG);
+    revoke(vars.FORCE_OPTIMIZATION);
+    declare(vars.FORCE_CLEAN);
     runSequence('metalsmith', 'less', callback);
 });
 
 gulp.task('publish', function (callback) {
     revoke(vars.DEBUG);
     revoke(vars.FORCE_OPTIMIZATION);
+    declare(vars.FORCE_CLEAN);
     runSequence('metalsmith', 'less', callback);
 });
