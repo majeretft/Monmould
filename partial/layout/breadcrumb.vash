@@ -53,20 +53,18 @@
     if (model.breadcrumbs && model.breadcrumbIndexRegex && model.path) {
         let breadcrumbs = lookup(model.breadcrumbs, model.breadcrumbIndexRegex, model.path);
         if (breadcrumbs && breadcrumbs.length > 1) {
-            <nav class="breadcrumb-wrap">
-                <div class="container">
-                    <ol class="breadcrumb">
-                        @breadcrumbs.forEach(function(b) {
-                            if (b.path === model.path) {
-                                <li class="active">@model.title</li>
-                            } else {
-                                <li>
-                                    <a href="/@b.path">@b.title</a>
-                                </li>
-                            }
-                        })
-                    </ol>
-                </div>
+            <nav>
+                <ol class="breadcrumb">
+                    @breadcrumbs.forEach(function(b) {
+                        if (b.path === model.path) {
+                            <li class="active">@model.title</li>
+                        } else {
+                            <li>
+                                <a href="/@b.path">@b.title</a>
+                            </li>
+                        }
+                    })
+                </ol>
             </nav>
         }
     };

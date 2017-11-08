@@ -2,7 +2,7 @@
     var hasLocales = false;
 }
 
-<p class="text-right text-info">
+<div class="text-right text-info available-in">
     Also available in: 
 
     @model.locales.forEach(function(l) {
@@ -20,4 +20,4 @@
     @if (!hasLocales) {
         <span>no translations available for this page</span>
     }
-</p>
+</div>

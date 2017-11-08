@@ -27,6 +27,8 @@
             </div>
             <div class="col-lg-9">
                 @html.include('partial/layout/menu.vash', model)
+                @html.include('partial/layout/breadcrumb.vash', model)
+                @html.include('partial/layout/availableIn.vash', model)
             </div>
         </div>
         <main>
