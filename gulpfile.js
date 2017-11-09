@@ -209,21 +209,27 @@ gulp.task('metalsmith', function (callback) {
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('assets')))
 
         // Generating favicon
-        .use(favicons({
-            src: 'assets/logo_src.png',
-            dest: './',
-            icons: {
-                android: true,
-                appleIcon: true,
-                favicons: true,
-                firefox: true,
-                opengraph: true,
-                twitter: true,
-                windows: true,
-                yandex: true
-            }
-        }))
-        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('favicon')))
+        .use(msIf(
+            !isDeclared(vars.DEBUG) || (isDeclared(vars.DEBUG) && isDeclared(vars.FORCE_OPTIMIZATION)), 
+            favicons({
+                src: 'assets/logo_src.png',
+                dest: './',
+                icons: {
+                    android: true,
+                    appleIcon: true,
+                    favicons: true,
+                    firefox: true,
+                    opengraph: true,
+                    twitter: true,
+                    windows: true,
+                    yandex: true
+                }
+            })
+        ))
+        .use(msIf(
+            isDeclared(vars.DEBUG) && isDeclared(vars.FORCE_OPTIMIZATION),
+            debugUi.report('favicon')
+        ))
 
         // Building website
         .build(function (err) {
