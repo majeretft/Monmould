@@ -12,6 +12,7 @@ let sitemap = require('metalsmith-sitemap');
 let robots = require('metalsmith-robots');
 let updated = require('metalsmith-updated');
 let htmlMinifier = require('metalsmith-html-minifier');
+let favicons = require('metalsmith-favicons');
 
 let gulp = require('gulp');
 let less = require('gulp-less');
@@ -42,7 +43,7 @@ let isDeclared = function (variable) {
     if (!(variable in vars))
         throw `Variable ${variable} is not supported`;
 
-    return process.env[variable] && process.env[variable] === trueValue;
+    return process.env[variable] && process.env[variable] === trueValue ? true : false;
 };
 
 let declare = function (variable) {
@@ -148,7 +149,7 @@ gulp.task('metalsmith', function (callback) {
         // Add links to use with sitemap
         .use(breadcrumbGen())
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('breadcrumbGen')))
-        
+
         // Compiling partials
         .use(inPlace())
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('inPlace')))
@@ -206,6 +207,23 @@ gulp.task('metalsmith', function (callback) {
             destination: './assets'
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('assets')))
+
+        // Generating favicon
+        .use(favicons({
+            src: 'assets/logo_src.png',
+            dest: './',
+            icons: {
+                android: true,
+                appleIcon: true,
+                favicons: true,
+                firefox: true,
+                opengraph: true,
+                twitter: true,
+                windows: true,
+                yandex: true
+            }
+        }))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('favicon')))
 
         // Building website
         .build(function (err) {
