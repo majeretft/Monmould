@@ -1,0 +1,44 @@
+.menu-logo {
+    font-size: 30px; 
+    line-height: 52px; 
+    position: relative;
+
+    .logo-image {
+        width: 52px;
+        display: block;
+        float: left;
+    }
+
+    .decoration {
+        position: absolute;
+        right: 25px;
+        left: 70px;
+        top: 0;
+        bottom: 0;
+        border-top: 2px solid @color-bg-blue;
+    
+        &::before {
+            content: " ";
+            position: absolute;
+            right: -57px;
+            top: -2px;
+            width: 0;
+            height: 0;
+            border-top: 52px solid transparent;
+            border-left: 57px solid @color-bg-blue;
+        }
+    
+        &::after {
+            content: " ";
+            position: absolute;
+            right: -54px;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-top: 60px solid transparent;
+            border-left: 54px solid white;
+        }
+    }
+    
+
+}

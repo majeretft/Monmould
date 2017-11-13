@@ -37,7 +37,7 @@
                     @html.raw(model.contents)
                 </main>
             </div>
-        </div>  
+        </div>
         <footer>
             @html.include('partial/layout/footer.vash', model)
         </footer>
