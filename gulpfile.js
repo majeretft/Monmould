@@ -69,6 +69,7 @@ let options = {
     localeDefault: 'ru',
     localeList: ['ru', 'en'],
     canonical: 'http://monmold.ru',
+    buildVersion: '0.0.1'
 };
 
 let getDir = function () {
@@ -86,6 +87,10 @@ gulp.task('metalsmith', function (callback) {
         .source(`./${options.dirSrc}`)
         .destination(`./${getDir()}`)
         .clean(!isDeclared(vars.DEBUG) || isDeclared(vars.FORCE_CLEAN))
+
+        .metadata({
+            buildVersion: options.buildVersion
+        })
 
         // Adding environment variables to metadata
         .use(environment())

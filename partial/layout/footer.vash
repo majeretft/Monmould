@@ -29,7 +29,7 @@
         <p>@model.__('contact.mainWebsite'): <a href="http://monmould.com" target="_blank" hreflang="cn">monmould.com</a></p>
     </div>
     <div class="col-lg-3">
-        <h4 class="footer-header"><img src="/assets/logo100x100.png" alt="" class="footer-logo"> Mon Mould</h3>
+        <h4 class="footer-header"><img src="/assets/logo100x100.png?v=@model.buildVersion" alt="" class="footer-logo"> Mon Mould</h3>
         <p>@model.__('footer.brandText')</p>
         <div class="ya-share2" data-services="facebook,twitter,blogger"></div>
     </div>
