@@ -1,7 +1,7 @@
 @* Contact card *@
 <div class="contact-card">
     <div class="text-center contact-head">
-        <img src="/assets/logo.png" class="contact-logo">
+        <img src="/assets/logo160x160.png" class="contact-logo">
         <span class="contact-logo-text-start">Mon</span>
         <span class="contact-logo-text-end">Mould</spanv>
         <div class=" text-uppercase contact-slogan">@model.__('brand.slogan')</div>
