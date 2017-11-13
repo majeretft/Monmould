@@ -18,6 +18,6 @@
     })
 
     @if (!hasLocales) {
-        <span>no translations available for this page</span>
+        <span>no translations</span>
     }
 </div>
