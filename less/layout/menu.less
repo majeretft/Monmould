@@ -5,6 +5,7 @@
     border-radius: 0;
     border-bottom: 2px solid @color-bg-blue;
     margin-bottom: @margin-after-block;
+    min-height: 52px;
 
     .navbar-collapse {
         padding-left: 0;
@@ -12,17 +13,22 @@
 
     .nav > li {
         margin-right: 10px;
-    }
 
-    .nav > li > a {
-        border-top-left-radius: @radius;
-        border-top-right-radius: @radius;
-        color: @color-text-dark;
-        transition: color ease-out 0.25s, background-color ease-out 0.25s;
+        &:first-child{
+            margin-left: 15px;
+        }
 
-        &:hover, &:focus {
-            color: @color-text-light;
-            background-color: @color-bg-blue;
+        & > a {
+            border-radius: @radius;
+            color: @color-text-dark;
+            transition: color ease-out 0.25s, background-color ease-out 0.25s;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            &:hover, &:focus {
+                color: @color-text-light;
+                background-color: @color-bg-blue;
+            }
         }
     }
 
