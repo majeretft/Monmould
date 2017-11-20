@@ -52,7 +52,7 @@
 
     if (model.breadcrumbs && model.breadcrumbIndexRegex && model.path) {
         let breadcrumbs = lookup(model.breadcrumbs, model.breadcrumbIndexRegex, model.path);
-        <nav class="breadcrumb-wrap">
+        <nav class="row breadcrumb-wrap">
             <div class="col-lg-8">
                 @if (breadcrumbs && breadcrumbs.length > 1) {
                     <ol class="breadcrumb">
