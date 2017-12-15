@@ -14,7 +14,7 @@
             <dt>Email:</dt>
             <dd>info@@monmould.com</dd>
             <dt>@model.__('contact.telephone'):</dt>
-            <dd>+86 576 81116831</dd>
+            <dd>+86 576 81116381</dd>
             <dt>@model.__('contact.cellphone'):</dt>
             <dd>+86 136 56596671</dd>
             <dt>Skype:</dt>
