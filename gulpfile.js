@@ -106,6 +106,10 @@ gulp.task('metalsmith', function (callback) {
             'root_ru': '*_ru.*',
             'root_portfolio_en': 'portfolio/*_en.*',
             'root_portfolio_ru': 'portfolio/*_ru.*',
+            'root_portfolio_mold-design_en': 'portfolio/mold-design/*_en.*',
+            'root_portfolio_mold-design_ru': 'portfolio/mold-design/*_ru.*',
+            'root_portfolio_mold-for-custom-part_en': 'portfolio/mold-for-custom-part/*_en.*',
+            'root_portfolio_mold-for-custom-part_ru': 'portfolio/mold-for-custom-part/*_ru.*',
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('collections')))
 
@@ -147,11 +151,23 @@ gulp.task('metalsmith', function (callback) {
             }, {
                 match: { collection: 'root_portfolio_ru' },
                 pattern: 'portfolio/:uri/'
+            }, {
+                match: { collection: 'root_portfolio_mold-design_en' },
+                pattern: ':locale/portfolio/mold-design/:uri/'
+            }, {
+                match: { collection: 'root_portfolio_mold-design_ru' },
+                pattern: 'portfolio/mold-design/:uri/'
+            }, {
+                match: { collection: 'root_portfolio_mold-for-custom-part_en' },
+                pattern: ':locale/portfolio/mold-for-custom-part/:uri/'
+            }, {
+                match: { collection: 'root_portfolio_mold-for-custom-part_ru' },
+                pattern: 'portfolio/mold-for-custom-part/:uri/'
             }]
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('permalinks')))
 
-        // Add links to use with sitemap
+        // Add breadcrumbs
         .use(breadcrumbGen())
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('breadcrumbGen')))
 

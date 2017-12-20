@@ -43,9 +43,9 @@
     },
     "portfolio_ru.md": {
         "filename": "portfolio_ru.md",
-        "hash": "7bd6dddff9b4fce0c34f1c8754e4b4ed",
+        "hash": "19985d5e22f078947ce756f110fdaa7d",
         "created": "2017-09-08T15:59:21.084Z",
-        "updated": "2017-09-08T15:59:21.084Z"
+        "updated": "2017-12-20T15:26:50.385Z"
     },
     "product-and-technology_en.md": {
         "filename": "product-and-technology_en.md",
@@ -103,15 +103,15 @@
     },
     "index_en.html": {
         "filename": "index_en.html",
-        "hash": "7689d7a3de0305c15fbbc0d732a3a4a1",
+        "hash": "1f53285961f7b6ba38e4fc1a8d92f4aa",
         "created": "2017-10-04T11:01:28.807Z",
-        "updated": "2017-10-05T11:25:27.643Z"
+        "updated": "2017-12-20T14:04:31.608Z"
     },
     "index_ru.html": {
         "filename": "index_ru.html",
-        "hash": "d835307d6d41041d43f470b661602e1c",
+        "hash": "e5e414e41c60439d94a39e324677f6cd",
         "created": "2017-10-04T11:01:34.281Z",
-        "updated": "2017-10-05T11:21:09.955Z"
+        "updated": "2017-12-20T14:04:31.608Z"
     },
     "index_en.html.vash": {
         "filename": "index_en.html.vash",
@@ -124,5 +124,89 @@
         "hash": "e5e414e41c60439d94a39e324677f6cd",
         "created": "2017-10-05T14:37:18.006Z",
         "updated": "2017-10-31T14:00:04.075Z"
+    },
+    "portfolio\\mold-design_ru.html.vash": {
+        "filename": "portfolio\\mold-design_ru.html.vash",
+        "hash": "7f87398ee93571cc2c97f3b8c589b28a",
+        "created": "2017-12-20T12:53:37.115Z",
+        "updated": "2017-12-20T12:56:07.127Z"
+    },
+    "portfolio\\mold-design_en.html.vash": {
+        "filename": "portfolio\\mold-design_en.html.vash",
+        "hash": "e27f7f713fe9bbb4fc4afe45c5700a4c",
+        "created": "2017-12-20T12:53:37.115Z",
+        "updated": "2017-12-20T12:53:37.115Z"
+    },
+    "portfolio\\mold-for-custom-part_en.html.vash": {
+        "filename": "portfolio\\mold-for-custom-part_en.html.vash",
+        "hash": "479d30e2b1c52fdfb55f419549cfed63",
+        "created": "2017-12-20T12:53:37.115Z",
+        "updated": "2017-12-20T12:53:37.115Z"
+    },
+    "portfolio\\mold-for-custom-part_ru.html.vash": {
+        "filename": "portfolio\\mold-for-custom-part_ru.html.vash",
+        "hash": "e7fb079a79bf32ddbab6dd8b1894721c",
+        "created": "2017-12-20T12:53:37.115Z",
+        "updated": "2017-12-20T12:56:07.127Z"
+    },
+    "portfolio\\mold-design\\mold-for-car-mirrorhosing_en.html.vash": {
+        "filename": "portfolio\\mold-design\\mold-for-car-mirrorhosing_en.html.vash",
+        "hash": "8906be258bcd28878e1335dd39095b44",
+        "created": "2017-12-20T12:53:37.115Z",
+        "updated": "2017-12-20T12:53:37.115Z"
+    },
+    "portfolio\\mold-design\\mold-for-car-mirrorhosing_ru.html.vash": {
+        "filename": "portfolio\\mold-design\\mold-for-car-mirrorhosing_ru.html.vash",
+        "hash": "8981f1e4fb048cec3e491bacb7773a38",
+        "created": "2017-12-20T12:53:37.115Z",
+        "updated": "2017-12-20T12:56:07.127Z"
+    },
+    "portfolio\\mold-for-custom-part\\armature-clamp_en.html.vash": {
+        "filename": "portfolio\\mold-for-custom-part\\armature-clamp_en.html.vash",
+        "hash": "614362e2cbe99019cf08a18fa8de7175",
+        "created": "2017-12-20T12:53:37.115Z",
+        "updated": "2017-12-20T12:53:37.115Z"
+    },
+    "portfolio\\mold-for-custom-part\\armature-clamp_ru.html.vash": {
+        "filename": "portfolio\\mold-for-custom-part\\armature-clamp_ru.html.vash",
+        "hash": "63f1b05f84acbaeba6cddd43f4e24695",
+        "created": "2017-12-20T12:53:37.115Z",
+        "updated": "2017-12-20T12:56:07.127Z"
+    },
+    "portfolio\\mold-design_ru.html": {
+        "filename": "portfolio\\mold-design_ru.html",
+        "hash": "7f87398ee93571cc2c97f3b8c589b28a",
+        "created": "2017-12-20T14:04:31.608Z",
+        "updated": "2017-12-20T14:04:31.608Z"
+    },
+    "portfolio\\mold-for-custom-part_ru.html": {
+        "filename": "portfolio\\mold-for-custom-part_ru.html",
+        "hash": "e7fb079a79bf32ddbab6dd8b1894721c",
+        "created": "2017-12-20T14:04:31.608Z",
+        "updated": "2017-12-20T14:04:31.608Z"
+    },
+    "portfolio\\mold-design\\mold-for-car-mirrorhosing_ru.html": {
+        "filename": "portfolio\\mold-design\\mold-for-car-mirrorhosing_ru.html",
+        "hash": "8981f1e4fb048cec3e491bacb7773a38",
+        "created": "2017-12-20T14:04:31.608Z",
+        "updated": "2017-12-20T14:04:31.608Z"
+    },
+    "portfolio\\mold-for-custom-part\\armature-clamp_ru.html": {
+        "filename": "portfolio\\mold-for-custom-part\\armature-clamp_ru.html",
+        "hash": "63f1b05f84acbaeba6cddd43f4e24695",
+        "created": "2017-12-20T14:04:31.608Z",
+        "updated": "2017-12-20T14:04:31.608Z"
+    },
+    "portfolio_en.html": {
+        "filename": "portfolio_en.html",
+        "hash": "b7d829d3422f3eb8af8faf9c7e620f95",
+        "created": "2017-12-20T15:29:12.967Z",
+        "updated": "2017-12-20T15:29:12.967Z"
+    },
+    "portfolio_ru.html": {
+        "filename": "portfolio_ru.html",
+        "hash": "8493390bbf0bec7441546172f204d592",
+        "created": "2017-12-20T15:29:12.967Z",
+        "updated": "2017-12-20T15:29:12.967Z"
     }
 }
