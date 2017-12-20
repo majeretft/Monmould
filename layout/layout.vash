@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @* The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags *@
     <title>@model.title | Mon Mould Factory</title>
+    
+    <meta name="format-detection" content="telephone=no"/>
+
+    @html.include('partial/layout/favicon.vash', model)
 </head>
 
 <body>
@@ -23,21 +27,19 @@
         </div>
         <div class="row">
             <div class="col-lg-3">
-                @html.include('partial/contact-card.vash', model)
+                @html.include('partial/layout/menu-logo.vash', model)
             </div>
             <div class="col-lg-9">
                 @html.include('partial/layout/menu.vash', model)
             </div>
         </div>
         <main>
+            @html.include('partial/layout/breadcrumb.vash', model)
             @html.raw(model.contents)
         </main>
         <footer>
             @html.include('partial/layout/footer.vash', model)
         </footer>
-
-        @* Yandex share *@
-        <script src="//yastatic.net/share2/share.js"></script>
     </div>
     <div class="container text-center copywrite">&copy; since 1996 Taizhou Huangyan Mon Mould Factory</div>
 
@@ -48,13 +50,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 
     @* Latest compiled and minified CSS *@
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/index.css?v=@model.buildVersion">
 
     @* jQuery (necessary for Bootstrap's JavaScript plugins) *@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     @* Latest compiled and minified JavaScript *@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    @* Yandex share *@
+    <script src="//yastatic.net/share2/share.js"></script>
 </body>
 
 </html>

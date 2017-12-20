@@ -23,13 +23,13 @@
         <h4 class="footer-header">@model.__('contact.contact')</h4>
         <p>@model.__('contact.person'): Mr.Fang</p>
         <p>Email: info@@monmould.com</p>
-        <p>@model.__('contact.telephone'): <span class="text-nowrap">+86 576 81116831</span></p>
+        <p>@model.__('contact.telephone'): <span class="text-nowrap">+86 576 81116381</span></p>
         <p>@model.__('contact.cellphone'): <span class="text-nowrap">+86 136 56596671</span></p>
         <p>Skype: monsteven</p>
         <p>@model.__('contact.mainWebsite'): <a href="http://monmould.com" target="_blank" hreflang="cn">monmould.com</a></p>
     </div>
     <div class="col-lg-3">
-        <h4 class="footer-header"><img src="/assets/mm_logo.png" alt="" class="footer-logo"> Mon Mould</h3>
+        <h4 class="footer-header"><img src="/assets/logo100x100.png?v=@model.buildVersion" alt="" class="footer-logo"> Mon Mould</h3>
         <p>@model.__('footer.brandText')</p>
         <div class="ya-share2" data-services="facebook,twitter,blogger"></div>
     </div>

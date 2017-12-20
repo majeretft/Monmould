@@ -52,9 +52,9 @@
 
     if (model.breadcrumbs && model.breadcrumbIndexRegex && model.path) {
         let breadcrumbs = lookup(model.breadcrumbs, model.breadcrumbIndexRegex, model.path);
-        if (breadcrumbs && breadcrumbs.length > 1) {
-            <nav class="breadcrumb-wrap">
-                <div class="container">
+        <nav class="row breadcrumb-wrap">
+            <div class="col-lg-8">
+                @if (breadcrumbs && breadcrumbs.length > 1) {
                     <ol class="breadcrumb">
                         @breadcrumbs.forEach(function(b) {
                             if (b.path === model.path) {
@@ -66,8 +66,11 @@
                             }
                         })
                     </ol>
-                </div>
-            </nav>
-        }
+                }
+            </div>
+            <div class="col-lg-4">
+                @html.include('partial/layout/availableIn.vash', model)
+            </div>
+        </nav>
     };
 }

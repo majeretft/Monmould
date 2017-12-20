@@ -2,8 +2,8 @@
     var hasLocales = false;
 }
 
-<p class="text-right text-info">
-    Also available in: 
+<div class="text-right text-info available-in">
+    This page is also available in: 
 
     @model.locales.forEach(function(l) {
         if (model.locale === l)
@@ -18,6 +18,6 @@
     })
 
     @if (!hasLocales) {
-        <span>no translations available for this page</span>
+        <span>no translations</span>
     }
-</p>
+</div>

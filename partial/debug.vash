@@ -16,6 +16,6 @@
 
 <div class="row mm-debug">
     <div class="col-xs-12">
-        Go read <a href="/debug-ui/">DEBUG UI</a> plugin metadata!
+        This is development build. Access DEBUG metadata using <a href="/debug-ui/">this link</a> 
     </div>
 </div>

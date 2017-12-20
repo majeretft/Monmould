@@ -12,6 +12,7 @@ let sitemap = require('metalsmith-sitemap');
 let robots = require('metalsmith-robots');
 let updated = require('metalsmith-updated');
 let htmlMinifier = require('metalsmith-html-minifier');
+let favicons = require('metalsmith-favicons');
 
 let gulp = require('gulp');
 let less = require('gulp-less');
@@ -32,7 +33,8 @@ const trueValue = 'YES';
 
 let vars = {
     DEBUG: 'DEBUG',
-    FORCE_OPTIMIZATION: 'FORCE_OPTIMIZATION'
+    FORCE_OPTIMIZATION: 'FORCE_OPTIMIZATION',
+    FORCE_CLEAN: 'FORCE_CLEAN'
 };
 
 process.env[vars.DEBUG] = trueValue;
@@ -41,7 +43,7 @@ let isDeclared = function (variable) {
     if (!(variable in vars))
         throw `Variable ${variable} is not supported`;
 
-    return process.env[variable] && process.env[variable] === trueValue;
+    return process.env[variable] && process.env[variable] === trueValue ? true : false;
 };
 
 let declare = function (variable) {
@@ -67,6 +69,7 @@ let options = {
     localeDefault: 'ru',
     localeList: ['ru', 'en'],
     canonical: 'http://monmold.ru',
+    buildVersion: '0.0.1'
 };
 
 let getDir = function () {
@@ -83,7 +86,11 @@ gulp.task('metalsmith', function (callback) {
     metalsmith
         .source(`./${options.dirSrc}`)
         .destination(`./${getDir()}`)
-        .clean(!isDeclared(vars.DEBUG))
+        .clean(!isDeclared(vars.DEBUG) || isDeclared(vars.FORCE_CLEAN))
+
+        .metadata({
+            buildVersion: options.buildVersion
+        })
 
         // Adding environment variables to metadata
         .use(environment())
@@ -147,7 +154,7 @@ gulp.task('metalsmith', function (callback) {
         // Add links to use with sitemap
         .use(breadcrumbGen())
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('breadcrumbGen')))
-        
+
         // Compiling partials
         .use(inPlace())
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('inPlace')))
@@ -206,6 +213,29 @@ gulp.task('metalsmith', function (callback) {
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('assets')))
 
+        // Generating favicon
+        .use(msIf(
+            !isDeclared(vars.DEBUG) || (isDeclared(vars.DEBUG) && isDeclared(vars.FORCE_OPTIMIZATION)), 
+            favicons({
+                src: 'assets/logo_src.png',
+                dest: './',
+                icons: {
+                    android: true,
+                    appleIcon: true,
+                    favicons: true,
+                    firefox: true,
+                    opengraph: true,
+                    twitter: true,
+                    windows: true,
+                    yandex: true
+                }
+            })
+        ))
+        .use(msIf(
+            isDeclared(vars.DEBUG) && isDeclared(vars.FORCE_OPTIMIZATION),
+            debugUi.report('favicon')
+        ))
+
         // Building website
         .build(function (err) {
             if (err)
@@ -258,17 +288,27 @@ gulp.task('serve-optimize', ['build-optimize'], function () {
 gulp.task('build', function (callback) {
     declare(vars.DEBUG);
     revoke(vars.FORCE_OPTIMIZATION);
+    revoke(vars.FORCE_CLEAN);
     runSequence('metalsmith', 'less', callback);
 });
 
 gulp.task('build-optimize', function (callback) {
     declare(vars.DEBUG);
     declare(vars.FORCE_OPTIMIZATION);
+    revoke(vars.FORCE_CLEAN);
+    runSequence('metalsmith', 'less', callback);
+});
+
+gulp.task('build-clean', function (callback) {
+    declare(vars.DEBUG);
+    revoke(vars.FORCE_OPTIMIZATION);
+    declare(vars.FORCE_CLEAN);
     runSequence('metalsmith', 'less', callback);
 });
 
 gulp.task('publish', function (callback) {
     revoke(vars.DEBUG);
     revoke(vars.FORCE_OPTIMIZATION);
+    declare(vars.FORCE_CLEAN);
     runSequence('metalsmith', 'less', callback);
 });
