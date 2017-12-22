@@ -14,6 +14,7 @@ let updated = require('metalsmith-updated');
 let htmlMinifier = require('metalsmith-html-minifier');
 let favicons = require('metalsmith-favicons');
 let i18n = require('metalsmith-i18n');
+let multiLanguage = require('metalsmith-multi-language');
 
 let gulp = require('gulp');
 let less = require('gulp-less');
@@ -26,7 +27,6 @@ let runSequence = require('run-sequence');
 
 let linkGen = require('./util/linkGen');
 let breadcrumbGen = require('./util/breadcrumbGen');
-let multiLanguage = require('./util/localizationCollectionHelper');
 
 // **** EVNIRONMENT VARIABLES **** //
 const trueValue = 'YES';
