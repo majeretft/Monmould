@@ -9,3 +9,8 @@ layout: layout-index.vash
 ---
 
 <h1>Привет Мир!</h1>
+
+@{
+    let x = 1;
+    <h2>Hello @x!</h2>
+}
