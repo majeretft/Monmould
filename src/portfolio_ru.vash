@@ -17,18 +17,4 @@ changefreq: "monthly"
     Fusce tincidunt sodales dolor, nec interdum elit viverra id. Phasellus eros metus, gravida et ex nec, fringilla tristique erat. Curabitur sed risus ac sem maximus aliquet nec a massa. Sed eu consectetur eros. Nunc lobortis vehicula est mollis lobortis. Mauris at dolor nec elit faucibus vulputate. Phasellus sed nunc eu eros tristique ultricies. Mauris finibus dui magna, et egestas eros ullamcorper ac. Aenean non ultrices ex. Nam vel neque hendrerit, cursus augue sit amet, interdum lorem. Donec dui orci, elementum ut accumsan eu, ornare at tortor.
 </p>
 
-<img src="http://via.placeholder.com/200x200" class="img-thumbnail">
-<img src="http://via.placeholder.com/200x200" class="img-thumbnail">
-<img src="http://via.placeholder.com/200x200" class="img-thumbnail">
-<img src="http://via.placeholder.com/200x200" class="img-thumbnail">
-
-@{
-    let x = 1;
-    <h2>Hello @x!</h2>
-}
-
-<ul>
-    @for (var i = 0; i < 5; i++) {
-        <li>@i</li>
-    }
-</ul>
+@html.include('partial/portfolio-card.vash', model)

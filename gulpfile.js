@@ -106,10 +106,21 @@ gulp.task('metalsmith', function (callback) {
             'root_ru': '*_ru.*',
             'root_portfolio_en': 'portfolio/*_en.*',
             'root_portfolio_ru': 'portfolio/*_ru.*',
+            
             'root_portfolio_mold-design_en': 'portfolio/mold-design/*_en.*',
             'root_portfolio_mold-design_ru': 'portfolio/mold-design/*_ru.*',
+            
             'root_portfolio_mold-for-custom-part_en': 'portfolio/mold-for-custom-part/*_en.*',
             'root_portfolio_mold-for-custom-part_ru': 'portfolio/mold-for-custom-part/*_ru.*',
+            
+            'root_portfolio_mold-for-2-shot-parts_en': 'portfolio/mold-for-2-shot-parts/*_en.*',
+            'root_portfolio_mold-for-2-shot-parts_ru': 'portfolio/mold-for-2-shot-parts/*_ru.*',
+
+            'root_portfolio_mold-for-fitting_en': 'portfolio/mold-for-fitting/*_en.*',
+            'root_portfolio_mold-for-fitting_ru': 'portfolio/mold-for-fitting/*_ru.*',
+
+            'root_portfolio_mold-for-household_en': 'portfolio/mold-for-household/*_en.*',
+            'root_portfolio_mold-for-household_ru': 'portfolio/mold-for-household/*_ru.*',
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('collections')))
 

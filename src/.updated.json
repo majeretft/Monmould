@@ -175,9 +175,9 @@
     },
     "portfolio\\mold-design_ru.html": {
         "filename": "portfolio\\mold-design_ru.html",
-        "hash": "7f87398ee93571cc2c97f3b8c589b28a",
+        "hash": "46115b92892a188ae2f9064925e23cc3",
         "created": "2017-12-20T14:04:31.608Z",
-        "updated": "2017-12-20T14:04:31.608Z"
+        "updated": "2017-12-25T11:53:20.973Z"
     },
     "portfolio\\mold-for-custom-part_ru.html": {
         "filename": "portfolio\\mold-for-custom-part_ru.html",
@@ -229,9 +229,9 @@
     },
     "portfolio_ru.vash": {
         "filename": "portfolio_ru.vash",
-        "hash": "4fe2d5a92391dc1ccf0c5d9fbab6ed59",
+        "hash": "1487f8f6e7399efe1f1985f6c14a12a8",
         "created": "2017-12-22T11:12:35.657Z",
-        "updated": "2017-12-22T11:12:35.657Z"
+        "updated": "2017-12-26T09:40:08.532Z"
     },
     "index_en.vash": {
         "filename": "index_en.vash",
@@ -244,5 +244,89 @@
         "hash": "a72b2a5a44216da2f6aa2719213dfdd0",
         "created": "2017-12-22T11:44:12.621Z",
         "updated": "2017-12-22T11:44:12.621Z"
+    },
+    "portfolio\\mold-for-2-shot-parts.html": {
+        "filename": "portfolio\\mold-for-2-shot-parts.html",
+        "hash": "b04f39b0df532814a27cb09e004128ab",
+        "created": "2017-12-25T09:27:39.556Z",
+        "updated": "2017-12-25T09:27:39.556Z"
+    },
+    "portfolio\\mold-for-fitting.html": {
+        "filename": "portfolio\\mold-for-fitting.html",
+        "hash": "4125a4f42dd8ca70eea4592a33be4ab0",
+        "created": "2017-12-25T09:27:39.556Z",
+        "updated": "2017-12-25T09:27:39.556Z"
+    },
+    "portfolio\\mold-for-household.html": {
+        "filename": "portfolio\\mold-for-household.html",
+        "hash": "660b34f733dbdd6157771a3afa094de0",
+        "created": "2017-12-25T09:27:39.556Z",
+        "updated": "2017-12-25T09:27:39.556Z"
+    },
+    "portfolio\\mold-for-2-shot-parts_ru.html": {
+        "filename": "portfolio\\mold-for-2-shot-parts_ru.html",
+        "hash": "b04f39b0df532814a27cb09e004128ab",
+        "created": "2017-12-25T09:28:37.340Z",
+        "updated": "2017-12-25T09:28:37.340Z"
+    },
+    "portfolio\\mold-for-fitting_ru.html": {
+        "filename": "portfolio\\mold-for-fitting_ru.html",
+        "hash": "4125a4f42dd8ca70eea4592a33be4ab0",
+        "created": "2017-12-25T09:28:37.340Z",
+        "updated": "2017-12-25T09:28:37.340Z"
+    },
+    "portfolio\\mold-for-household_ru.html": {
+        "filename": "portfolio\\mold-for-household_ru.html",
+        "hash": "660b34f733dbdd6157771a3afa094de0",
+        "created": "2017-12-25T09:28:37.340Z",
+        "updated": "2017-12-25T09:28:37.340Z"
+    },
+    "portfolio\\mold-design_ru.vash": {
+        "filename": "portfolio\\mold-design_ru.vash",
+        "hash": "e8dc5d136299076a9c7342b98e9712ff",
+        "created": "2017-12-25T11:53:37.939Z",
+        "updated": "2017-12-25T12:36:51.746Z"
+    },
+    "portfolio\\mold-for-2-shot-parts_ru.vash": {
+        "filename": "portfolio\\mold-for-2-shot-parts_ru.vash",
+        "hash": "b04f39b0df532814a27cb09e004128ab",
+        "created": "2017-12-25T11:53:44.437Z",
+        "updated": "2017-12-25T11:53:44.437Z"
+    },
+    "portfolio\\mold-for-custom-part_ru.vash": {
+        "filename": "portfolio\\mold-for-custom-part_ru.vash",
+        "hash": "e7fb079a79bf32ddbab6dd8b1894721c",
+        "created": "2017-12-25T11:53:49.722Z",
+        "updated": "2017-12-25T11:53:49.722Z"
+    },
+    "portfolio\\mold-for-fitting_ru.vash": {
+        "filename": "portfolio\\mold-for-fitting_ru.vash",
+        "hash": "4125a4f42dd8ca70eea4592a33be4ab0",
+        "created": "2017-12-25T11:53:53.955Z",
+        "updated": "2017-12-25T11:53:53.955Z"
+    },
+    "portfolio\\mold-for-household_ru.vash": {
+        "filename": "portfolio\\mold-for-household_ru.vash",
+        "hash": "660b34f733dbdd6157771a3afa094de0",
+        "created": "2017-12-25T11:53:58.466Z",
+        "updated": "2017-12-25T11:53:58.466Z"
+    },
+    "portfolio\\mold-design\\mold-for-car-mirrorhosing_ru.vash": {
+        "filename": "portfolio\\mold-design\\mold-for-car-mirrorhosing_ru.vash",
+        "hash": "8981f1e4fb048cec3e491bacb7773a38",
+        "created": "2017-12-25T12:03:28.697Z",
+        "updated": "2017-12-25T12:03:28.697Z"
+    },
+    "portfolio\\mold-for-custom-part\\armature-clamp_ru.vash": {
+        "filename": "portfolio\\mold-for-custom-part\\armature-clamp_ru.vash",
+        "hash": "63f1b05f84acbaeba6cddd43f4e24695",
+        "created": "2017-12-25T12:03:34.089Z",
+        "updated": "2017-12-25T12:03:34.089Z"
+    },
+    "portfolio\\mold-design\\car-mirror-hosing_ru.vash": {
+        "filename": "portfolio\\mold-design\\car-mirror-hosing_ru.vash",
+        "hash": "8981f1e4fb048cec3e491bacb7773a38",
+        "created": "2017-12-25T12:24:12.194Z",
+        "updated": "2017-12-25T12:24:12.194Z"
     }
 }
