@@ -3,6 +3,6 @@
     <img src="/assets/img/banner_1.jpg" alt="" class="img-responsive img-rounded">
     @* / Banner *@
     @* Page Header *@
-    <h1 class="text-center caption">@model.__('home.mainHeader')</h1>
+    @* <h1 class="text-center caption">@model.__('home.mainHeader')</h1> *@
     @* / Page Header *@
 </div>
