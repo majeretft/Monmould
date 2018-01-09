@@ -1,4 +1,11 @@
 <div class="row footer-content">
+
+    <div class="col-lg-3">
+        <h4 class="footer-header"><img src="/assets/logo100x100.png?v=@model.buildVersion" alt="" class="footer-logo"> Mon Mould</h3>
+        <p>@model.__('footer.brandText')</p>
+        <div class="ya-share2" data-services="facebook,twitter,blogger"></div>
+    </div>
+
     @if (model.collections && model.collections[`root_portfolio_${model.locale}`]) {
         let c = model.collections[`root_portfolio_${model.locale}`];
         let rowCount = 6;
@@ -40,9 +47,5 @@
         <p>Skype: @model.contactData.skype</p>
         <p>@model.__('contact.mainWebsite'): <a href="http://monmould.com" target="_blank" hreflang="cn">monmould.com</a></p>
     </div>
-    <div class="col-lg-3">
-        <h4 class="footer-header"><img src="/assets/logo100x100.png?v=@model.buildVersion" alt="" class="footer-logo"> Mon Mould</h3>
-        <p>@model.__('footer.brandText')</p>
-        <div class="ya-share2" data-services="facebook,twitter,blogger"></div>
-    </div>
+    
 </div>
