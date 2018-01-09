@@ -15,6 +15,7 @@ let htmlMinifier = require('metalsmith-html-minifier');
 let favicons = require('metalsmith-favicons');
 let i18n = require('metalsmith-i18n');
 let multiLanguage = require('metalsmith-multi-language');
+let metadata = require('metalsmith-metadata');
 
 let gulp = require('gulp');
 let less = require('gulp-less');
@@ -91,6 +92,12 @@ gulp.task('metalsmith', function (callback) {
         .metadata({
             buildVersion: options.buildVersion
         })
+
+        // Adding static data from file
+        .use(metadata({
+            contactData: 'meta/contactData.json'
+        }))
+        .use(msIf(isDeclared(vars.DEBUG), debugUi.report('metadata')))
 
         // Adding environment variables to metadata
         .use(environment())
