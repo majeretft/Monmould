@@ -225,7 +225,7 @@
         "filename": "portfolio_en.vash",
         "hash": "78f88979618e909e7031f4742bfbd1c3",
         "created": "2017-12-22T11:12:35.657Z",
-        "updated": "2018-01-10T15:11:25.234Z"
+        "updated": "2018-01-10T15:22:01.404Z"
     },
     "portfolio_ru.vash": {
         "filename": "portfolio_ru.vash",
@@ -235,15 +235,15 @@
     },
     "index_en.vash": {
         "filename": "index_en.vash",
-        "hash": "9e0b42f1c6d268b119e6101f19f0126b",
+        "hash": "68446495fd1a291cbdf774a152b3d720",
         "created": "2017-12-22T11:43:59.372Z",
-        "updated": "2018-01-10T14:27:20.028Z"
+        "updated": "2018-01-10T15:30:34.606Z"
     },
     "index_ru.vash": {
         "filename": "index_ru.vash",
-        "hash": "bcd03c80d1fd3091f408440c55670a4f",
+        "hash": "707a922fc91685c2a010965e72bb29af",
         "created": "2017-12-22T11:44:12.621Z",
-        "updated": "2018-01-10T14:01:54.145Z"
+        "updated": "2018-01-10T15:29:11.324Z"
     },
     "portfolio\\mold-for-2-shot-parts.html": {
         "filename": "portfolio\\mold-for-2-shot-parts.html",

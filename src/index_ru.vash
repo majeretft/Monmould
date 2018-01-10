@@ -17,29 +17,42 @@ layout: layout-index.vash
     Мы выполняем проектирование, изготовление и поставку пресс-форм на внутренний и зарубежный рынки.
 </p>
 
-<p>
-    Предприятие Mon Mould имеет более 10 лет опыта в производстве пресс-форм для литья пластмасс под давлением.
-    У нас вы можете заказать пресс-формы для: двухцветного литья, автомобильных деталей, 
-    хозяйственных товаров, PVC фитингов, PPR фитингов, литья PET преформ и многих других видов изделий из пластмасс.
-</p>
+<div class="row">
+    <div class="col-lg-3">
+        <img src="/assets/compic_.jpg" alt="" class="img-thumbnail">
+    </div>
+    <div class="col-lg-9">
+        <p>
+            Предприятие Mon Mould имеет более 10 лет опыта в производстве пресс-форм для литья пластмасс под давлением.
+            У нас вы можете заказать пресс-формы для: двухцветного литья, автомобильных деталей, 
+            хозяйственных товаров, PVC фитингов, PPR фитингов, литья PET преформ и многих других видов изделий из пластмасс.
+        </p>
 
-<p>
-    Компания Mon Mould заинтересована в производстве литьевых форм с высоким рабочим ресурсом с отличным соотношением цены и качества.
-    Для достижения этой цели на фабрике используется современное оборудование и программное обеспечение.
-</p>
+        <p>
+            Компания Mon Mould заинтересована в производстве литьевых форм с высоким рабочим ресурсом с отличным соотношением цены и качества.
+            Для достижения этой цели на фабрике используется современное оборудование и программное обеспечение.
+        </p>
+    </div>
+</div>
 
-@if (model.collections && model.collections[`root_portfolio_${model.locale}`]) {
-    let c = model.collections[`root_portfolio_${model.locale}`];
+<div class="row">
+    <div class="col-lg-6">
+        @if (model.collections && model.collections[`root_portfolio_${model.locale}`]) {
+            let c = model.collections[`root_portfolio_${model.locale}`];
 
-    <h2>Примеры нашей продукции:</h2>
-    <ul>
-        @c.forEach(function(i){
-            var l = i.portfolioLogo ? `/assets/img/${i.portfolioLogo}` : 'http://via.placeholder.com/252x252?text=No+image'
+            <h2>Примеры нашей продукции:</h2>
+            <ul>
+                @c.forEach(function(i){
+                    var l = i.portfolioLogo ? `/assets/img/${i.portfolioLogo}` : 'http://via.placeholder.com/252x252?text=No+image'
 
-            <li>
-                <a href="/@i.path"> @i.title</a>
+                    <li>
+                        <a href="/@i.path"> @i.title</a>
+                    </li>
+                })
             </li>
-        })
-    </li>
-
-}
+        }
+    </div>
+    <div class="col-lg-6">
+        <img src="/assets/a8_.jpg" alt="" class="img-thumbnail">
+    </div>
+</div>
