@@ -223,9 +223,9 @@
     },
     "portfolio_en.vash": {
         "filename": "portfolio_en.vash",
-        "hash": "b7d829d3422f3eb8af8faf9c7e620f95",
+        "hash": "78f88979618e909e7031f4742bfbd1c3",
         "created": "2017-12-22T11:12:35.657Z",
-        "updated": "2017-12-22T11:12:35.657Z"
+        "updated": "2018-01-10T15:11:25.234Z"
     },
     "portfolio_ru.vash": {
         "filename": "portfolio_ru.vash",
@@ -235,9 +235,9 @@
     },
     "index_en.vash": {
         "filename": "index_en.vash",
-        "hash": "1f53285961f7b6ba38e4fc1a8d92f4aa",
+        "hash": "9e0b42f1c6d268b119e6101f19f0126b",
         "created": "2017-12-22T11:43:59.372Z",
-        "updated": "2017-12-22T11:43:59.372Z"
+        "updated": "2018-01-10T14:27:20.028Z"
     },
     "index_ru.vash": {
         "filename": "index_ru.vash",
@@ -328,5 +328,41 @@
         "hash": "8981f1e4fb048cec3e491bacb7773a38",
         "created": "2017-12-25T12:24:12.194Z",
         "updated": "2017-12-25T12:24:12.194Z"
+    },
+    "contactData.json": {
+        "filename": "contactData.json",
+        "hash": "ab0ea29b74052bda2a07a757818902c9",
+        "created": "2018-01-10T14:21:30.395Z",
+        "updated": "2018-01-10T14:21:30.395Z"
+    },
+    "portfolio\\mold-design_en.vash": {
+        "filename": "portfolio\\mold-design_en.vash",
+        "hash": "0120eaff4ca0836fae0a2832db364f93",
+        "created": "2018-01-10T15:03:14.363Z",
+        "updated": "2018-01-10T15:03:14.363Z"
+    },
+    "portfolio\\mold-for-2-shot-parts_en.vash": {
+        "filename": "portfolio\\mold-for-2-shot-parts_en.vash",
+        "hash": "acdd884ae1d1f70c24c7fc676763c7cb",
+        "created": "2018-01-10T15:03:14.363Z",
+        "updated": "2018-01-10T15:03:14.363Z"
+    },
+    "portfolio\\mold-for-custom-part_en.vash": {
+        "filename": "portfolio\\mold-for-custom-part_en.vash",
+        "hash": "0e37426653b86f39c7c8d997dc66038d",
+        "created": "2018-01-10T15:03:14.363Z",
+        "updated": "2018-01-10T15:03:14.363Z"
+    },
+    "portfolio\\mold-for-fitting_en.vash": {
+        "filename": "portfolio\\mold-for-fitting_en.vash",
+        "hash": "c7a392698f3ce64bbb8a82d1ff571cb4",
+        "created": "2018-01-10T15:03:14.363Z",
+        "updated": "2018-01-10T15:03:14.363Z"
+    },
+    "portfolio\\mold-for-household_en.vash": {
+        "filename": "portfolio\\mold-for-household_en.vash",
+        "hash": "c0288c022f44f0066e7d0adbdab55793",
+        "created": "2018-01-10T15:03:14.363Z",
+        "updated": "2018-01-10T15:03:14.363Z"
     }
 }
