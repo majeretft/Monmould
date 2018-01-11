@@ -49,7 +49,7 @@
             @html.include('partial/layout/footer.vash', model)
         </footer>
     </div>
-    <div class="container text-center copywrite">&copy; since 1996 Taizhou Huangyan Mon Mould Factory</div>
+    <div class="container text-center copywrite">&copy; since 2004 Taizhou Huangyan Mon Mould Factory</div>
 
     @* Custom font *@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
