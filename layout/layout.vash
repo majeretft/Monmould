@@ -35,7 +35,19 @@
         </div>
         <main>
             @html.include('partial/layout/breadcrumb.vash', model)
-            @html.raw(model.contents)
+            <div class="row">
+                <div class="col-lg-9">
+                    @html.raw(model.contents)
+                </div>
+                <div class="col-lg-3">
+                    @if (!model.hideContactCard) {
+                        @html.include('partial/contact-card.vash', model)
+                    }
+                    @if (!model.hideAboutCard) {
+                        @html.include('partial/about-card.vash', model)
+                    }
+                </div>
+            </div>
         </main>
         <footer>
             @html.include('partial/layout/footer.vash', model)

@@ -3,6 +3,7 @@ title: "Контакты"
 uri: "contact"
 menuPosition: 5
 changefreq: "monthly"
+hideContactCard: true
 ---
 
 <div class="page-header">
