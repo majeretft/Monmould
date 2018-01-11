@@ -10,6 +10,6 @@
     <p>
         @model.__('about.briefly')[1]
     </p>
-    <a href="/about-us" class="text-uppercase read-more">Подробнее О Компании</a>
+    <a href="/about-us" class="text-uppercase read-more">@model.__('common.moreInfo') @model.__('about.about')</a>
 </div>
 @* / About *@

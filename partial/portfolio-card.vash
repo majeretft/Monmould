@@ -10,7 +10,7 @@
                     <img src="@l" alt="...">
                     <div class="caption">
                         <h3>@i.title</h3>
-                        <p><a href="/@i.path" class="text-uppercase read-more">Подробнее</a></p>
+                        <p><a href="/@i.path" class="text-uppercase read-more">@model.__('common.moreInfo')</a></p>
                     </div>
                 </div>
             </div>
