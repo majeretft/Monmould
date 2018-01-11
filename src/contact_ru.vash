@@ -5,4 +5,32 @@ menuPosition: 5
 changefreq: "monthly"
 ---
 
-## Контакты
+<div class="page-header">
+    <h1>Контакты</h1>
+</div>
+
+<address>
+    <p class="lead">
+        <strong>Taizhou Mon Mould factory</strong>
+    </p>
+
+    <dl>
+        <dt>@model.__('contact.address'):</dt>
+        <dd>@model.contactData.address</dd>
+        <br>
+        <dt>@model.__('contact.person'):</dt>
+        <dd>@model.contactData.person (@model.contactData.personAlias)</dd>
+        <br>
+        <dt>Email:</dt>
+        <dd>@model.contactData.email</dd>
+        <br>
+        <dt>@model.__('contact.telephone'):</dt>
+        <dd>@model.contactData.phoneLandline</dd>
+        <br>
+        <dt>@model.__('contact.cellphone'):</dt>
+        <dd>@model.contactData.phoneMobile</dd>
+        <br>
+        <dt>Skype:</dt>
+        <dd>@model.contactData.skype</dd>
+    </dl>
+</address>

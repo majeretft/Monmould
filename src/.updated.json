@@ -364,5 +364,29 @@
         "hash": "c0288c022f44f0066e7d0adbdab55793",
         "created": "2018-01-10T15:03:14.363Z",
         "updated": "2018-01-10T15:03:14.363Z"
+    },
+    "contact_en.vash": {
+        "filename": "contact_en.vash",
+        "hash": "c80152120d3606e4bca3e37a0e0fbfa8",
+        "created": "2018-01-11T09:25:24.189Z",
+        "updated": "2018-01-11T09:39:46.796Z"
+    },
+    "about_en.vash": {
+        "filename": "about_en.vash",
+        "hash": "acde32324bdd4bb842d08446238a0cc0",
+        "created": "2018-01-11T09:25:24.189Z",
+        "updated": "2018-01-11T09:25:24.189Z"
+    },
+    "about_ru.vash": {
+        "filename": "about_ru.vash",
+        "hash": "f5142a8e761cee11642030093fe969d4",
+        "created": "2018-01-11T09:25:24.189Z",
+        "updated": "2018-01-11T09:25:24.189Z"
+    },
+    "contact_ru.vash": {
+        "filename": "contact_ru.vash",
+        "hash": "c1f9554bebbaf2de3f10a85268eee191",
+        "created": "2018-01-11T09:25:24.189Z",
+        "updated": "2018-01-11T09:40:39.979Z"
     }
 }

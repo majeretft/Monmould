@@ -11,7 +11,8 @@
 		"person": "Contact person",
 		"telephone": "Telephone",
 		"mainWebsite": "Main website",
-		"cellphone": "Mobile"
+		"cellphone": "Mobile",
+		"address": "Address"
 	},
 	"about": {
 		"about": "About us",
