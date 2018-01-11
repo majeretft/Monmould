@@ -20,19 +20,21 @@
             @html.include("partial/debug.vash", model)
         }
 
-        <div class="row lang-panel">
-            <div class="col-lg-offset-10 col-lg-2">
-                @html.include('partial/layout/lang-switcher.vash', model)
+        <header>
+            <div class="row lang-panel">
+                <div class="col-lg-offset-10 col-lg-2">
+                    @html.include('partial/layout/lang-switcher.vash', model)
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3">
-                @html.include('partial/layout/menu-logo.vash', model)
+            <div class="row">
+                <div class="col-lg-3">
+                    @html.include('partial/layout/menu-logo.vash', model)
+                </div>
+                <div class="col-lg-9">
+                    @html.include('partial/layout/menu.vash', model)
+                </div>
             </div>
-            <div class="col-lg-9">
-                @html.include('partial/layout/menu.vash', model)
-            </div>
-        </div>
+        </header>
         <div class="row">
             <div class="col-lg-9">
                 @html.include('partial/banner.vash', model)
@@ -40,10 +42,10 @@
                     @html.raw(model.contents)
                 </main>
             </div>
-            <div class="col-lg-3">
+            <aside class="col-lg-3">
                 @html.include('partial/contact-card.vash', model)
                 @html.include('partial/about-card.vash', model)
-            </div>
+            </aside>
         </div>
         <footer>
             @html.include('partial/layout/footer.vash', model)
