@@ -373,15 +373,15 @@
     },
     "about_en.vash": {
         "filename": "about_en.vash",
-        "hash": "acde32324bdd4bb842d08446238a0cc0",
+        "hash": "16211835b384c128d31686863af6693e",
         "created": "2018-01-11T09:25:24.189Z",
-        "updated": "2018-01-11T09:25:24.189Z"
+        "updated": "2018-01-11T12:24:53.275Z"
     },
     "about_ru.vash": {
         "filename": "about_ru.vash",
-        "hash": "f5142a8e761cee11642030093fe969d4",
+        "hash": "62320f5a95a5637ac086f21df405973a",
         "created": "2018-01-11T09:25:24.189Z",
-        "updated": "2018-01-11T09:25:24.189Z"
+        "updated": "2018-01-11T12:24:47.077Z"
     },
     "contact_ru.vash": {
         "filename": "contact_ru.vash",
