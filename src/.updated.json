@@ -388,5 +388,17 @@
         "hash": "c1f9554bebbaf2de3f10a85268eee191",
         "created": "2018-01-11T09:25:24.189Z",
         "updated": "2018-01-11T09:40:39.979Z"
+    },
+    "product-and-technology_en.vash": {
+        "filename": "product-and-technology_en.vash",
+        "hash": "fdcbd6034da6e9df764db552c464910c",
+        "created": "2018-01-11T13:53:43.497Z",
+        "updated": "2018-01-11T13:53:43.497Z"
+    },
+    "product-and-technology_ru.vash": {
+        "filename": "product-and-technology_ru.vash",
+        "hash": "f2435d451737dec277100ec2869ac005",
+        "created": "2018-01-11T13:53:47.169Z",
+        "updated": "2018-01-11T13:53:47.169Z"
     }
 }
