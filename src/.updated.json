@@ -223,15 +223,15 @@
     },
     "portfolio_en.vash": {
         "filename": "portfolio_en.vash",
-        "hash": "78f88979618e909e7031f4742bfbd1c3",
+        "hash": "930c53e72dc55014c1a39a1d380bd3e4",
         "created": "2017-12-22T11:12:35.657Z",
-        "updated": "2018-01-10T15:22:01.404Z"
+        "updated": "2018-01-11T14:51:50.862Z"
     },
     "portfolio_ru.vash": {
         "filename": "portfolio_ru.vash",
-        "hash": "1487f8f6e7399efe1f1985f6c14a12a8",
+        "hash": "f839de9bfa3718ba6a1ca732b25a4f7d",
         "created": "2017-12-22T11:12:35.657Z",
-        "updated": "2017-12-26T09:40:08.532Z"
+        "updated": "2018-01-11T14:51:44.747Z"
     },
     "index_en.vash": {
         "filename": "index_en.vash",

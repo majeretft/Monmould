@@ -1,12 +1,12 @@
 ---
-title: "Портфолио"
-uri: "portfolio"
+title: "Галерея"
+uri: "gallery"
 menuPosition: 4
 changefreq: "monthly"
 ---
 
 <div class="page-header">
-    <h1>Портфолио</h1>
+    <h1>Галерея</h1>
 </div>
 
 <p>

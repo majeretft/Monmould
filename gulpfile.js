@@ -165,22 +165,22 @@ gulp.task('metalsmith', function (callback) {
                 pattern: ':uri/'
             }, {
                 match: { collection: 'root_portfolio_en' },
-                pattern: ':locale/portfolio/:uri/'
+                pattern: ':locale/gallery/:uri/'
             }, {
                 match: { collection: 'root_portfolio_ru' },
-                pattern: 'portfolio/:uri/'
+                pattern: 'gallery/:uri/'
             }, {
                 match: { collection: 'root_portfolio_mold-design_en' },
-                pattern: ':locale/portfolio/mold-design/:uri/'
+                pattern: ':locale/gallery/mold-design/:uri/'
             }, {
                 match: { collection: 'root_portfolio_mold-design_ru' },
-                pattern: 'portfolio/mold-design/:uri/'
+                pattern: 'gallery/mold-design/:uri/'
             }, {
                 match: { collection: 'root_portfolio_mold-for-custom-part_en' },
-                pattern: ':locale/portfolio/mold-for-custom-part/:uri/'
+                pattern: ':locale/gallery/mold-for-custom-part/:uri/'
             }, {
                 match: { collection: 'root_portfolio_mold-for-custom-part_ru' },
-                pattern: 'portfolio/mold-for-custom-part/:uri/'
+                pattern: 'gallery/mold-for-custom-part/:uri/'
             }]
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('permalinks')))
