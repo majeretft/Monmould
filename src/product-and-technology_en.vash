@@ -5,4 +5,52 @@ menuPosition: 3
 changefreq: "monthly"
 ---
 
-## Product and technology
+<div class="page-header">
+    <h1>Product and technology</h1>
+</div>
+
+<p class="lead">
+    Mon Mould factory is engaged in injection mould manufacturing.
+    We are designing moulds according to customer drawings and/or samples.
+    The factory applies quality control.
+    When mould get ready we perform a trial it and send moulded samples to the customer.
+    We perform finishing processing and preparation for delivery after get confirmation from the customer.
+</p>
+<p>
+    The factory is equipped with modern processing equipment.
+    Designing and manufacturing of products is carried out by experienced specialists.<br>
+</p>
+<p class="text-center">
+    <img src="/assets/EQ_1_.jpg" alt="" class="img-thumbnail inline-block-margin">
+    <img src="/assets/EQ_2_.jpg" alt="" class="img-thumbnail inline-block-margin">
+    <img src="/assets/equipment_02_.jpg" alt="" class="img-thumbnail inline-block-margin">
+    <img src="/assets/equipment_03_.jpg" alt="" class="img-thumbnail inline-block-margin">
+</p>
+    We are performing quality control during the whole manufacturing cycle from mould design to packing before delivery
+<p>
+</p>
+<ul>
+    <li>Design checking and mold flow analysis</li>
+    <li>Inspection for mould material hardness</li>
+    <li>Inspection for size of cavity and core</li>
+    <li>Inspection the whole mould before and after assembly</li>
+    <li>Mould trial on injection moulding and send samples to customer</li>
+    <li>Final inspection and package control before delivery</li>
+</ul>
+<p>
+    As the main CAD/CAM/CAE tools we are using actual version of NX Unigraphics software.
+    Due to this we can carry out a full cycle of design and production of the product and exchange documents with the customer.
+    You can send us 3D models (or 2D drawings) of the required product.
+    In this case we recommend using common file formats: DXF, DWG, PRT, SAT, IGES, STEP and others.
+</p>
+<p>
+    While designing a mould we perform mould flow control to avoid defects on final products.
+</p>
+<div class="row text-center">
+    <div class="col-lg-6">
+        <img src="/assets/mould-flow1.gif" alt="" class="img-thumbnail inline-block-margin">
+    </div>
+    <div class="col-lg-6">
+        <img src="/assets/mould-flow2.gif" alt="" class="img-thumbnail inline-block-margin">
+    </div>
+</div>

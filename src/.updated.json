@@ -391,14 +391,14 @@
     },
     "product-and-technology_en.vash": {
         "filename": "product-and-technology_en.vash",
-        "hash": "fdcbd6034da6e9df764db552c464910c",
+        "hash": "22c37e6833958dd0dedd9386ff69e8c5",
         "created": "2018-01-11T13:53:43.497Z",
-        "updated": "2018-01-11T13:53:43.497Z"
+        "updated": "2018-01-12T10:22:37.199Z"
     },
     "product-and-technology_ru.vash": {
         "filename": "product-and-technology_ru.vash",
-        "hash": "f6de3d51f0cfe24b7849a5a0d4f61ea3",
+        "hash": "715271c9c10cd0f866c08108a37c8f68",
         "created": "2018-01-11T13:53:47.169Z",
-        "updated": "2018-01-12T09:53:37.141Z"
+        "updated": "2018-01-12T10:22:41.622Z"
     }
 }
