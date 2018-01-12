@@ -10,11 +10,9 @@ changefreq: "monthly"
 </div>
 
 <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et nunc dui. In non euismod nisl, pretium dapibus risus. Curabitur non mollis ligula. Ut quam velit, vestibulum id nibh non, tincidunt ultrices sapien. Aliquam vitae augue volutpat diam consequat euismod. Morbi finibus, massa ut ultrices tempus, sem enim vehicula odio, tincidunt molestie nunc dolor sed magna. Fusce diam risus, pretium eget rutrum ut, ultricies in lorem. Sed tempor malesuada rhoncus. Praesent eget elit est. Vivamus sodales lectus arcu, et ultricies urna congue a.
-</p>
-
-<p>
-    Fusce tincidunt sodales dolor, nec interdum elit viverra id. Phasellus eros metus, gravida et ex nec, fringilla tristique erat. Curabitur sed risus ac sem maximus aliquet nec a massa. Sed eu consectetur eros. Nunc lobortis vehicula est mollis lobortis. Mauris at dolor nec elit faucibus vulputate. Phasellus sed nunc eu eros tristique ultricies. Mauris finibus dui magna, et egestas eros ullamcorper ac. Aenean non ultrices ex. Nam vel neque hendrerit, cursus augue sit amet, interdum lorem. Donec dui orci, elementum ut accumsan eu, ornare at tortor.
+    Quality is the life of factory, Mon are focus on this and always try to provide best mold solution for customer. 
+    With newest mold design principle, with the best machine processing (High speed CNC, high speed Engrave, slow wire cut), 
+    it is easy to get honest/good quality in Mon mould factory.
 </p>
 
 @html.include('partial/portfolio-card.vash', model)

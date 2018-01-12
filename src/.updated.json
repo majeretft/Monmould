@@ -223,15 +223,15 @@
     },
     "portfolio_en.vash": {
         "filename": "portfolio_en.vash",
-        "hash": "930c53e72dc55014c1a39a1d380bd3e4",
+        "hash": "74591f1c7c4ddcae4b447ab85f116a41",
         "created": "2017-12-22T11:12:35.657Z",
-        "updated": "2018-01-11T14:51:50.862Z"
+        "updated": "2018-01-12T10:53:12.029Z"
     },
     "portfolio_ru.vash": {
         "filename": "portfolio_ru.vash",
-        "hash": "f839de9bfa3718ba6a1ca732b25a4f7d",
+        "hash": "f97ddd1eb8a85af98193df307579f757",
         "created": "2017-12-22T11:12:35.657Z",
-        "updated": "2018-01-11T14:51:44.747Z"
+        "updated": "2018-01-12T10:52:21.498Z"
     },
     "index_en.vash": {
         "filename": "index_en.vash",
@@ -400,5 +400,29 @@
         "hash": "715271c9c10cd0f866c08108a37c8f68",
         "created": "2018-01-11T13:53:47.169Z",
         "updated": "2018-01-12T10:22:41.622Z"
+    },
+    "portfolio\\mold-design\\mold-design-photos.vash": {
+        "filename": "portfolio\\mold-design\\mold-design-photos.vash",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e",
+        "created": "2018-01-12T11:07:05.638Z",
+        "updated": "2018-01-12T11:07:05.638Z"
+    },
+    "portfolio\\mold-design\\mold-design-photos_ru.vash": {
+        "filename": "portfolio\\mold-design\\mold-design-photos_ru.vash",
+        "hash": "8981f1e4fb048cec3e491bacb7773a38",
+        "created": "2018-01-12T11:08:08.184Z",
+        "updated": "2018-01-12T11:08:08.184Z"
+    },
+    "portfolio\\mold-for-custom-part\\mold-for-custom-part_ru.vash": {
+        "filename": "portfolio\\mold-for-custom-part\\mold-for-custom-part_ru.vash",
+        "hash": "63f1b05f84acbaeba6cddd43f4e24695",
+        "created": "2018-01-12T11:08:08.184Z",
+        "updated": "2018-01-12T11:08:08.184Z"
+    },
+    "portfolio\\mold-for-2-shot-parts\\mold-for-2-shot-parts-photos_ru.vash": {
+        "filename": "portfolio\\mold-for-2-shot-parts\\mold-for-2-shot-parts-photos_ru.vash",
+        "hash": "8981f1e4fb048cec3e491bacb7773a38",
+        "created": "2018-01-12T11:08:08.184Z",
+        "updated": "2018-01-12T11:08:08.184Z"
     }
 }
