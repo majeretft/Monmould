@@ -1,10 +1,52 @@
 ---
-title: "Пресс-формы для заказных деталей"
+title: "Пресс-формы по чертежам изделия или образцу заказчика"
 uri: "mold-for-custom-part"
 changefreq: "never"
 portfolioLogo: "portfolio-mold-custom-part.jpg"
 ---
 
+<div class="page-header">
+    <h1>Пресс-формы по чертежам изделия или образцу заказчика</h1>
+</div>
+
 <p>
-    ...
+    Пресс-формы по чертежам изделия или образцу заказчика являются основной продукцией, 
+    включая хозяйственные и кухонные изделия, изделия для ванной, детали автомобилей и промышленного оборудованя.
+    Мы предоставим профессиональное решение для задачи заказчика.
 </p>
+
+<div class="row">
+    @{
+        let imgs = [
+            { name: '1-1', ext: '.jpg' , alt: '', text: '' },
+            { name: '2', ext: '.jpg' , alt: '', text: '' },
+            { name: '3', ext: '.jpg' , alt: '', text: '' },
+            { name: '4', ext: '.jpg' , alt: '', text: '' },
+            { name: '5', ext: '.jpg' , alt: '', text: '' },
+            { name: '11-1', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00212-6-6', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00212-11-11', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00213-4', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00215-3', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00230', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00251', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00253', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00301', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00301-1', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00366-1', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00371-1', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00372-1', ext: '.jpg' , alt: '', text: '' },
+        ];
+        let path = '/assets/mold-for-custom-part/';
+
+        imgs.forEach(function(i) {
+            <div class="col-lg-4">
+                <div class="thumbnail modal-link" data-toggle="modal" data-target="#imgModal" data-text="@i.text">
+                    <img src="@(path + i.name + i.ext)" alt="i.alt">
+                </div>
+            </div>
+        })
+    }
+</div>
+
+@html.include('partial/img-modal.vash', model)
