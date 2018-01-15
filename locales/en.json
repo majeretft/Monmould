@@ -26,6 +26,7 @@
 		"mouldsAndSamples": "Moulds and samples"
 	},
 	"common": {
-		"moreInfo": "More"
+		"moreInfo": "More",
+		"close": "Close"
 	}
 }

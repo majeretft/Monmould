@@ -74,6 +74,27 @@
 
     @* Yandex share *@
     <script src="//yastatic.net/share2/share.js"></script>
+
+    @* Site js *@
+    <script>
+        (function() {
+            $('#imgModal').on('show.bs.modal', function (event) {
+                var caller = $(event.relatedTarget);
+                var imgClone = caller.find('img').clone();
+                var text = caller.data('text');
+                
+                var modal = $(this);
+                
+                var modalBody = modal.find('.modal-body');
+                modalBody.empty();
+                imgClone.appendTo(modalBody);
+                
+                if (!text)
+                    return;
+                modal.find('.modal-title').text(text);
+            });
+        })();
+    </script>
 </body>
 
 </html>

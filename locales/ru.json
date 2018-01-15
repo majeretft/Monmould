@@ -26,6 +26,7 @@
 		"mouldsAndSamples": "Пресс-формы и изделия"
 	},
 	"common": {
-		"moreInfo": "Подробнее"
+		"moreInfo": "Подробнее",
+		"close": "Закрыть"
 	}
 }
