@@ -3,7 +3,7 @@
 }
 
 <div class="text-right text-info available-in">
-    This page is also available in: 
+    @model.__('common.switchToLanguage') 
 
     @model.locales.forEach(function(l) {
         if (model.locale === l)

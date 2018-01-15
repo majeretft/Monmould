@@ -27,6 +27,7 @@
 	},
 	"common": {
 		"moreInfo": "More",
-		"close": "Close"
+		"close": "Close",
+		"switchToLanguage": "Переключить на:"
 	}
 }

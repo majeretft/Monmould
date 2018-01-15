@@ -5,6 +5,32 @@ changefreq: "never"
 portfolioLogo: "portfolio-mold-design.jpg"
 ---
 
+<div class="page-header">
+    <h1>Проектирование пресс-форм</h1>
+</div>
+
+
 <p>
-    ...
+    Конструктора Mon Mould имеют более 10 лет опыта в разработке пресс-форм.
+    Мы используем последние наработки в области проектирования форм для обеспечения качества и долговечности, чтобы выполнить запрос заказчика.
+    Основываясь на своем богатом опыте мы предоставим решения для требуемого режима работы литьевых форм.
 </p>
+
+<div class="row">
+    @{
+        let imgs = [
+            { name: 'Mold-for-Car-Mirror-hosing', ext: '.jpg' , alt: '', text: 'Mold for mirror housing' },
+        ];
+        let path = '/assets/mold-design/';
+
+        imgs.forEach(function(i) {
+            <div class="col-lg-4">
+                <div class="thumbnail modal-link" data-toggle="modal" data-target="#imgModal" data-text="@i.text">
+                    <img src="@(path + i.name + i.ext)" alt="i.alt">
+                </div>
+            </div>
+        })
+    }
+</div>
+
+@html.include('partial/img-modal.vash', model)
