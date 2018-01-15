@@ -17,10 +17,10 @@ portfolioLogo: "portfolio-mold-2-shot.jpg"
 <div class="row">
     @{
         let imgs = [
-            { name: 'helmet-1', ext: '.jpg' , alt: '', text: '2 shot mold for helm' },
-            { name: 'helmet-2', ext: '.jpg' , alt: '', text: '2 shot mold for helm' },
-            { name: 'helmet-3', ext: '.jpg' , alt: '', text: '2 shot mold for helm' },
-            { name: 'helmet-4', ext: '.jpg' , alt: '', text: '2 shot mold for helm' },
+            { name: 'helmet-1', ext: '.jpg' , alt: '', text: 'Форма для литья каски' },
+            { name: 'helmet-2', ext: '.jpg' , alt: '', text: 'Форма для литья каски' },
+            { name: 'helmet-3', ext: '.jpg' , alt: '', text: 'Форма для литья каски' },
+            { name: 'helmet-4', ext: '.jpg' , alt: '', text: 'Форма для литья каски' },
         ];
         let path = '/assets/mold-for-2-shot-parts/';
 
