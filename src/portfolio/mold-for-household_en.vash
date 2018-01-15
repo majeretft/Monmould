@@ -1,11 +1,50 @@
 ---
-title: "Moulds for household"
+title: "Moulds for household goods"
 uri: "mold-for-household"
 changefreq: "never"
 portfolioLogo: "portfolio-mold-household.jpg"
 ---
 
+<div class="page-header">
+    <h1>Moulds for household goods</h1>
+</div>
+
 <p>
-    15 years in Household parts explore and provide mold solution, including Containers molds, 
+    10 years in Household parts explore and provide mold solution, including Containers molds, 
     crate molds, spoon molds, desk molds, take molds, chair molds, basin molds, flower pots molds and so on.
 </p>
+
+<div class="row">
+    @{
+        let imgs = [
+            { name: 'M-00365', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00357', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00182-3', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00187-9', ext: '.jpg' , alt: '', text: '' },
+            { name: '2', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00185-7', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00185-8', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00302', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00325', ext: '.jpg' , alt: '', text: '' },
+            { name: 'M-00327', ext: '.jpg' , alt: '', text: '' },
+            { name: '113', ext: '.jpg' , alt: '', text: '' },
+            { name: '115', ext: '.jpg' , alt: '', text: '' },
+            { name: '116', ext: '.jpg' , alt: '', text: '' },
+            { name: '117', ext: '.jpg' , alt: '', text: '' },
+            { name: '118', ext: '.jpg' , alt: '', text: '' },
+            { name: '121', ext: '.jpg' , alt: '', text: '' },
+            { name: '122', ext: '.jpg' , alt: '', text: '' },
+        ];
+        let path = '/assets/mold-for-household/';
+
+        imgs.forEach(function(i) {
+            <div class="col-lg-4">
+                <div class="thumbnail modal-link" data-toggle="modal" data-target="#imgModal" data-text="@i.text">
+                    <img src="@(path + i.name + i.ext)" alt="i.alt">
+                </div>
+            </div>
+        })
+    }
+</div>
+
+@html.include('partial/img-modal.vash', model)
