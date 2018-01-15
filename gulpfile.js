@@ -70,7 +70,7 @@ let options = {
     localeDefault: 'ru',
     localeList: ['ru', 'en'],
     canonical: 'http://monmold.ru',
-    buildVersion: '0.0.1'
+    buildVersion: '0.8.0'
 };
 
 let getDir = function () {
