@@ -205,7 +205,7 @@ gulp.task('metalsmith', function (callback) {
         .use(msIf(
             !isDeclared(vars.DEBUG) || (isDeclared(vars.DEBUG) && isDeclared(vars.FORCE_OPTIMIZATION)),
             htmlMinifier("*.html", {
-                removeEmptyElements: true,
+                removeEmptyElements: false,
                 removeEmptyAttributes: true,
                 removeComments: true,
                 removeAttributeQuotes: false,
