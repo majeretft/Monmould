@@ -20,6 +20,13 @@ portfolioLogo: "portfolio-mold-design.jpg"
     @{
         let imgs = [
             { name: 'Mold-for-Car-Mirror-hosing', ext: '.jpg' , alt: '', text: 'Mold for mirror housing' },
+            { name: 'Mold-for-case', ext: '.jpg' , alt: '', text: 'Mold for case' },
+            { name: 'Mold-for-custom-shelf', ext: '.jpg' , alt: '', text: 'Mold for custom shelf' },
+            { name: 'Mold-for-drawer', ext: '.jpg' , alt: '', text: 'Mold for drawer' },
+            { name: 'Mold-for-Trash-can', ext: '.jpg' , alt: '', text: 'Mold for trash can' },
+            { name: 'Two-floor-mold-1', ext: '.jpg' , alt: '', text: 'Two floor mold' },
+            { name: 'Two-floor-mold-2', ext: '.jpg' , alt: '', text: 'Two floor mold' },
+            { name: 'Two-floor-mold-3', ext: '.jpg' , alt: '', text: 'Two floor mold' },
         ];
         let path = '/assets/mold-design/';
 
