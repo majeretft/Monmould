@@ -1,10 +1,41 @@
 ---
-title: "Moulds fittings"
+title: "Moulds for fittings"
 uri: "mold-for-fitting"
 changefreq: "never"
 portfolioLogo: "portfolio-mold-fitting.jpg"
 ---
 
+<div class="page-header">
+    <h1>Moulds for fittings</h1>
+</div>
+
 <p>
     Mon provide PVC/PP/PPR ect fitting molds building service, for water suppler and drainage.
 </p>
+
+<div class="row">
+    @{
+        let imgs = [
+            { name: '0020', ext: '.jpg' , alt: '', text: '' },
+            { name: '0025', ext: '.jpg' , alt: '', text: '' },
+            { name: 'D3', ext: '.jpg' , alt: '', text: '' },
+            { name: 'G1', ext: '.jpg' , alt: '', text: '' },
+            { name: 'S1', ext: '.jpg' , alt: '', text: '' },
+            { name: 'S2', ext: '.jpg' , alt: '', text: '' },
+            { name: 'S13', ext: '.jpg' , alt: '', text: '' },
+            { name: 'W3', ext: '.jpg' , alt: '', text: '' },
+            { name: 'W6', ext: '.jpg' , alt: '', text: '' },
+        ];
+        let path = '/assets/mold-for-fitting/';
+
+        imgs.forEach(function(i) {
+            <div class="col-lg-4">
+                <div class="thumbnail modal-link" data-toggle="modal" data-target="#imgModal" data-text="@i.text">
+                    <img src="@(path + i.name + i.ext)" alt="i.alt">
+                </div>
+            </div>
+        })
+    }
+</div>
+
+@html.include('partial/img-modal.vash', model)
