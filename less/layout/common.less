@@ -24,7 +24,7 @@ body {
     color: darken(@color-text-light, 10%);
 
     a {
-        .a(darken(@color-text-light, 10%), @color-text-light, @color-text-light, underline);
+        .a(darken(@color-text-light, 10%), lighten(@color-text-blue, 25%), lighten(@color-text-blue, 25%), none);
     }
 }
 
@@ -53,4 +53,8 @@ body {
 .inline-block-margin {
     margin-bottom: 15px;
     margin-right: 15px;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-size: 30px;
 }
