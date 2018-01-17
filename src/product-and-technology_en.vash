@@ -20,14 +20,18 @@ changefreq: "monthly"
     The factory is equipped with modern processing equipment.
     Designing and manufacturing of products is carried out by experienced specialists.<br>
 </p>
-<p class="text-center">
-    <img src="/assets/EQ_1_.jpg" alt="" class="img-thumbnail inline-block-margin">
-    <img src="/assets/EQ_2_.jpg" alt="" class="img-thumbnail inline-block-margin">
-    <img src="/assets/equipment_02_.jpg" alt="" class="img-thumbnail inline-block-margin">
-    <img src="/assets/equipment_03_.jpg" alt="" class="img-thumbnail inline-block-margin">
-</p>
-    We are performing quality control during the whole manufacturing cycle from mould design to packing before delivery
+<div class="row">
+    <div class="col-lg-6 col-md-6 text-right">
+        <img src="/assets/EQ_1_.jpg" alt="" class="img-thumbnail bottom-spacing">
+        <img src="/assets/EQ_2_.jpg" alt="" class="img-thumbnail bottom-spacing">
+    </div>
+    <div class="col-lg-6 col-md-6 text-left">
+        <img src="/assets/equipment_02_.jpg" alt="" class="img-thumbnail bottom-spacing">
+        <img src="/assets/equipment_03_.jpg" alt="" class="img-thumbnail bottom-spacing">
+    </div>
+</div>
 <p>
+    We are performing quality control during the whole manufacturing cycle from mould design to packing before delivery
 </p>
 <ul>
     <li>Design checking and mold flow analysis</li>
@@ -47,10 +51,10 @@ changefreq: "monthly"
     While designing a mould we perform mould flow control to avoid defects on final products.
 </p>
 <div class="row text-center">
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-md-6">
         <img src="/assets/mould-flow1.gif" alt="" class="img-thumbnail inline-block-margin">
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-md-6">
         <img src="/assets/mould-flow2.gif" alt="" class="img-thumbnail inline-block-margin">
     </div>
 </div>

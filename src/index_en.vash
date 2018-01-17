@@ -18,10 +18,10 @@ layout: layout-index.vash
 </p>
 
 <div class="row">
-    <div class="col-lg-3">
+    <div class="col-lg-3 col-md-4">
         <img src="/assets/compic_.jpg" alt="" class="img-thumbnail">
     </div>
-    <div class="col-lg-9">
+    <div class="col-lg-9 col-md-8">
         <p>
             Mon Mould factory contains over 10 years experience in manufactoring of injection moulds.
             You can order moulds to produce: 2-shot parts, auto (car) parts, 
@@ -36,7 +36,7 @@ layout: layout-index.vash
 </div>
 
 <div class="row">
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-md-6">
         @if (model.collections && model.collections[`root_portfolio_${model.locale}`]) {
             let c = model.collections[`root_portfolio_${model.locale}`];
 
@@ -51,7 +51,7 @@ layout: layout-index.vash
             </li>
         }
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 col-md-6">
         <img src="/assets/a8_.jpg" alt="" class="img-thumbnail">
     </div>
 </div>

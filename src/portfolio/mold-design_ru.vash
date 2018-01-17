@@ -31,7 +31,7 @@ portfolioLogo: "portfolio-mold-design.jpg"
         let path = '/assets/mold-design/';
 
         imgs.forEach(function(i) {
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
                 <div class="thumbnail modal-link" data-toggle="modal" data-target="#imgModal" data-text="@i.text">
                     <img src="@(path + i.name + i.ext)" alt="i.alt">
                 </div>
