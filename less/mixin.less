@@ -22,6 +22,8 @@
 .a(@color, @hoverColor, @focusColor, @hoverTextDecoration) {
     color: @color;
 
+    text-decoration: @hoverTextDecoration;
+
     &:hover {
         color: @hoverColor;
         text-decoration: @hoverTextDecoration;
@@ -29,5 +31,9 @@
 
     &:focus {
         color: @focusColor;
+    }
+
+    &:active, &:visited {
+        text-decoration: @hoverTextDecoration;
     }
 }
