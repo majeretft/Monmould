@@ -36,7 +36,7 @@ hideAboutCard: true
     </li>
 </ol>
 <div class="row">
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="thumbnail">
             <img src="/assets/a7_.jpg" alt="">
         </div>
@@ -44,7 +44,7 @@ hideAboutCard: true
             <img src="/assets/a6_.jpg" alt="">
         </div>
     </div>
-    <div class="col-lg-6 col-md-6">
+    <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="thumbnail">
             <img src="/assets/a8_.jpg" alt="">
         </div>

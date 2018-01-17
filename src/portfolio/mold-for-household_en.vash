@@ -38,9 +38,9 @@ portfolioLogo: "portfolio-mold-household.jpg"
         let path = '/assets/mold-for-household/';
 
         imgs.forEach(function(i) {
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="thumbnail modal-link" data-toggle="modal" data-target="#imgModal" data-text="@i.text">
-                    <img src="@(path + i.name + i.ext)" alt="i.alt">
+                    <img src="@(path + i.name + i.ext)" alt="i.alt" class="img-max-width">
                 </div>
             </div>
         })

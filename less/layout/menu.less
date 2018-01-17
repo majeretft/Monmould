@@ -39,43 +39,13 @@
         }
     }
 }
-// ------------------
 
-// @import (once) '../var.less';
-
-// .mm-navbar {
-//     @border-color: darken(#eee, 10%);
-//     @border-shadow-color: darken(@border-color, 5%);
-//     @active-color: @bs-color-text-primary;
-    
-//     margin-bottom: @margin-block;
-//     font-size: 16px;
-//     border-bottom: 1px solid @bs-color-nav-border;
-//     background-color: @bs-color-nav-bg;
-
-//     .navbar-nav > li > a {
-//         border-top: 2px solid transparent;
-//         color: @bs-color-text-default;
-//         transition: background-color 0.15s ease-in, color 0.15s ease-in;
-
-//         &:hover {
-//             color: #eee;
-//             background-color: @bs-color-text-primary;
-//         }
-//     }
-
-//     .navbar-nav > li.active > a {
-//         border-top-color: @active-color;
-//         color: @active-color;
-        
-//         &:hover {
-//             color: #eee;
-//         }
-//     }
-
-//     @media (min-width: 768px) {
-//         .navbar-right {
-//             margin-right: 0;
-//         }
-//     }
-// }
+@media(min-width: @bs-screen-sm-min) and (max-width: @bs-screen-md-min) {
+    .navbar-custom {
+        .nav > li {
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+}

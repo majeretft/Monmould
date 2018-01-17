@@ -235,15 +235,15 @@
     },
     "index_en.vash": {
         "filename": "index_en.vash",
-        "hash": "8766cde9abbab99f42daee8d75e20f26",
+        "hash": "83eee766ad0a126b71bb43844f0c327a",
         "created": "2017-12-22T11:43:59.372Z",
-        "updated": "2018-01-17T13:34:51.062Z"
+        "updated": "2018-01-17T14:06:29.142Z"
     },
     "index_ru.vash": {
         "filename": "index_ru.vash",
-        "hash": "c33c942e01698b966628da578a2d005a",
+        "hash": "0451ab951d6089bbd371fcec0e3e964d",
         "created": "2017-12-22T11:44:12.621Z",
-        "updated": "2018-01-17T13:35:07.990Z"
+        "updated": "2018-01-17T14:07:37.385Z"
     },
     "portfolio\\mold-for-2-shot-parts.html": {
         "filename": "portfolio\\mold-for-2-shot-parts.html",
@@ -283,33 +283,33 @@
     },
     "portfolio\\mold-design_ru.vash": {
         "filename": "portfolio\\mold-design_ru.vash",
-        "hash": "84c12d543c4a676d05ae7b678b6ebbc1",
+        "hash": "be373a8ef1c257dbc6704aa2a9510c30",
         "created": "2017-12-25T11:53:37.939Z",
-        "updated": "2018-01-17T13:48:15.296Z"
+        "updated": "2018-01-17T14:16:13.386Z"
     },
     "portfolio\\mold-for-2-shot-parts_ru.vash": {
         "filename": "portfolio\\mold-for-2-shot-parts_ru.vash",
-        "hash": "e33e131e0894012f412904ff29e014a8",
+        "hash": "be1e0d3bfdb766d049ef87cba96b24fb",
         "created": "2017-12-25T11:53:44.437Z",
-        "updated": "2018-01-17T13:48:21.428Z"
+        "updated": "2018-01-17T14:16:13.386Z"
     },
     "portfolio\\mold-for-custom-part_ru.vash": {
         "filename": "portfolio\\mold-for-custom-part_ru.vash",
-        "hash": "5382085391c69171040203cd0fefde6c",
+        "hash": "9d5e62c341be33a95a86960cb4104a50",
         "created": "2017-12-25T11:53:49.722Z",
-        "updated": "2018-01-17T13:48:29.040Z"
+        "updated": "2018-01-17T14:15:26.826Z"
     },
     "portfolio\\mold-for-fitting_ru.vash": {
         "filename": "portfolio\\mold-for-fitting_ru.vash",
-        "hash": "4e0c09fe37727f1548bd24f0996a2cdf",
+        "hash": "28432430be1c11cd05d85030d1d98244",
         "created": "2017-12-25T11:53:53.955Z",
-        "updated": "2018-01-17T13:48:33.751Z"
+        "updated": "2018-01-17T14:15:33.382Z"
     },
     "portfolio\\mold-for-household_ru.vash": {
         "filename": "portfolio\\mold-for-household_ru.vash",
-        "hash": "00a0c1a2368823be2bad1b4321dba314",
+        "hash": "9e63cd94c1a07eac184b9c7e55600f47",
         "created": "2017-12-25T11:53:58.466Z",
-        "updated": "2018-01-17T13:48:42.083Z"
+        "updated": "2018-01-17T14:15:30.137Z"
     },
     "portfolio\\mold-design\\mold-for-car-mirrorhosing_ru.vash": {
         "filename": "portfolio\\mold-design\\mold-for-car-mirrorhosing_ru.vash",
@@ -337,33 +337,33 @@
     },
     "portfolio\\mold-design_en.vash": {
         "filename": "portfolio\\mold-design_en.vash",
-        "hash": "0b289e8dcbd00504d07bb60c2fcb6550",
+        "hash": "483efa42939b50737b00e580e3bbe070",
         "created": "2018-01-10T15:03:14.363Z",
-        "updated": "2018-01-17T13:48:11.196Z"
+        "updated": "2018-01-17T14:16:13.386Z"
     },
     "portfolio\\mold-for-2-shot-parts_en.vash": {
         "filename": "portfolio\\mold-for-2-shot-parts_en.vash",
-        "hash": "4db8f6e9287f0992d5b8b729fcccc6f7",
+        "hash": "990cd7c0de2d1fa655aa6cdbb749c36d",
         "created": "2018-01-10T15:03:14.363Z",
-        "updated": "2018-01-17T13:48:18.382Z"
+        "updated": "2018-01-17T14:16:13.386Z"
     },
     "portfolio\\mold-for-custom-part_en.vash": {
         "filename": "portfolio\\mold-for-custom-part_en.vash",
-        "hash": "1efa011626aa9c3edae05de0b9cf3a83",
+        "hash": "8c5493b7a85f22c1a8a3470d28b88527",
         "created": "2018-01-10T15:03:14.363Z",
-        "updated": "2018-01-17T13:48:25.175Z"
+        "updated": "2018-01-17T14:16:13.386Z"
     },
     "portfolio\\mold-for-fitting_en.vash": {
         "filename": "portfolio\\mold-for-fitting_en.vash",
-        "hash": "ccd5cf724eb58e3a931ef56308a7ca34",
+        "hash": "94cbb2a945139dfddb8d75b55352a4ed",
         "created": "2018-01-10T15:03:14.363Z",
-        "updated": "2018-01-17T13:48:33.751Z"
+        "updated": "2018-01-17T14:15:23.653Z"
     },
     "portfolio\\mold-for-household_en.vash": {
         "filename": "portfolio\\mold-for-household_en.vash",
-        "hash": "3bb34b95e9d552d92c88a5aaa4044670",
+        "hash": "829c633a7718ad34e9b27b42c1d28105",
         "created": "2018-01-10T15:03:14.363Z",
-        "updated": "2018-01-17T13:48:42.083Z"
+        "updated": "2018-01-17T14:15:05.505Z"
     },
     "contact_en.vash": {
         "filename": "contact_en.vash",
@@ -373,15 +373,15 @@
     },
     "about_en.vash": {
         "filename": "about_en.vash",
-        "hash": "4152c90ed394e2a69dd21cec9248a45a",
+        "hash": "5244fbd0b7efe8a2af89b8da56171161",
         "created": "2018-01-11T09:25:24.189Z",
-        "updated": "2018-01-17T13:34:22.733Z"
+        "updated": "2018-01-17T14:08:22.626Z"
     },
     "about_ru.vash": {
         "filename": "about_ru.vash",
-        "hash": "17a8939a6aeaa82adc29db77b99a0fd8",
+        "hash": "2be8b4fe418f141e8a0529328b6b486d",
         "created": "2018-01-11T09:25:24.189Z",
-        "updated": "2018-01-17T13:34:28.603Z"
+        "updated": "2018-01-17T14:08:50.089Z"
     },
     "contact_ru.vash": {
         "filename": "contact_ru.vash",
@@ -391,15 +391,15 @@
     },
     "product-and-technology_en.vash": {
         "filename": "product-and-technology_en.vash",
-        "hash": "3b92f6268ff0c10c8e4b4958ba01b887",
+        "hash": "f442edcc0c6ca8d2d160040d6a081427",
         "created": "2018-01-11T13:53:43.497Z",
-        "updated": "2018-01-17T13:40:15.000Z"
+        "updated": "2018-01-17T14:10:08.538Z"
     },
     "product-and-technology_ru.vash": {
         "filename": "product-and-technology_ru.vash",
-        "hash": "eb52c04aae1f2baaa9ec4e42a1b50c88",
+        "hash": "10b0bfc4fbd974de853d45d13ab6a31b",
         "created": "2018-01-11T13:53:47.169Z",
-        "updated": "2018-01-17T13:39:28.396Z"
+        "updated": "2018-01-17T14:09:40.570Z"
     },
     "portfolio\\mold-design\\mold-design-photos.vash": {
         "filename": "portfolio\\mold-design\\mold-design-photos.vash",
