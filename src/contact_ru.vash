@@ -24,14 +24,15 @@ hideContactCard: true
         <br>
         <dt>Email:</dt>
         <dd>@model.contactData.email</dd>
+        <dt>Skype:</dt>
+        <dd>@model.contactData.skype</dd>
         <br>
         <dt>@model.__('contact.telephone'):</dt>
         <dd>@model.contactData.phoneLandline</dd>
-        <br>
         <dt>@model.__('contact.cellphone'):</dt>
         <dd>@model.contactData.phoneMobile</dd>
         <br>
-        <dt>Skype:</dt>
-        <dd>@model.contactData.skype</dd>
+        <dt>Основной вебсайт:</dt>
+        <dd><a href="http://monmould.com" target="_blank" hreflang="cn">monmould.com</a></dd>
     </dl>
 </address>
