@@ -52,7 +52,7 @@ layout: layout-index.vash
             </li>
         }
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-offset-2 col-sm-8">
+    <div class="col-md-offset-0 col-lg-6 col-md-6 col-sm-offset-2 col-sm-8">
         <img src="/assets/a8_.jpg" alt="" class="img-thumbnail">
     </div>
 </div>
