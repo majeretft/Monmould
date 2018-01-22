@@ -207,7 +207,7 @@ gulp.task('metalsmith', function (callback) {
             htmlMinifier("*.html", {
                 removeEmptyElements: false,
                 removeEmptyAttributes: true,
-                removeComments: true,
+                removeComments: false,
                 removeAttributeQuotes: false,
                 processConditionalComments: false,
                 keepClosingSlash: true
@@ -235,7 +235,9 @@ gulp.task('metalsmith', function (callback) {
 
         // Generating robots txt
         .use(robots({
-            disallow: '/',
+            useragent: '*',
+            allow: ['/'],
+            disallow: ['/http404.html'],
             sitemap: `${isDeclared(vars.DEBUG) ? 'http://localhost:3000' : options.canonical}/sitemap.xml`
         }))
         .use(msIf(isDeclared(vars.DEBUG), debugUi.report('robots')))
