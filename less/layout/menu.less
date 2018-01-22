@@ -1,0 +1,51 @@
+// Navbar
+.navbar-custom {
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid @color-bg-blue;
+    margin-bottom: @margin-after-block;
+    min-height: 52px;
+
+    .navbar-collapse {
+        padding-left: 0;
+    }
+
+    .nav > li {
+        margin-right: 10px;
+
+        &:first-child{
+            margin-left: 15px;
+        }
+
+        & > a {
+            border-radius: @radius;
+            color: @color-text-dark;
+            transition: color ease-out 0.25s, background-color ease-out 0.25s;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            &:hover, &:focus {
+                color: @color-text-light;
+                background-color: @color-bg-blue;
+            }
+        }
+    }
+
+    .nav > li.active {
+        & > a {
+            color: @color-text-light;
+            background-color: @color-bg-blue;
+        }
+    }
+}
+
+@media(min-width: @bs-screen-sm-min) and (max-width: @bs-screen-md-min) {
+    .navbar-custom {
+        .nav > li {
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+}

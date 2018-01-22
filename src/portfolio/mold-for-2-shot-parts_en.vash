@@ -1,0 +1,37 @@
+---
+title: "Moulds for 2-shot parts"
+uri: "mold-for-2-shot-parts"
+changefreq: "monthly"
+portfolioLogo: "portfolio-mold-2-shot.jpg"
+---
+
+<div class="page-header">
+    <h1>Moulds for 2-shot parts</h1>
+</div>
+
+<p>
+    Mon Mold factory produces molds for two-color casting.
+    Provide professor 2-shot molds solution for 2-shot household parts, industrial parts ect.
+</p>
+
+<div class="row">
+    @{
+        let imgs = [
+            { name: 'helmet-1', ext: '.jpg' , alt: '', text: '2 shot mold for helm' },
+            { name: 'helmet-2', ext: '.jpg' , alt: '', text: '2 shot mold for helm' },
+            { name: 'helmet-3', ext: '.jpg' , alt: '', text: '2 shot mold for helm' },
+            { name: 'helmet-4', ext: '.jpg' , alt: '', text: '2 shot mold for helm' },
+        ];
+        let path = '/assets/mold-for-2-shot-parts/';
+
+        imgs.forEach(function(i) {
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="thumbnail modal-link" data-toggle="modal" data-target="#imgModal" data-text="@i.text">
+                    <img src="@(path + i.name + i.ext)" alt="i.alt" class="img-max-width">
+                </div>
+            </div>
+        })
+    }
+</div>
+
+@html.include('partial/img-modal.vash', model)

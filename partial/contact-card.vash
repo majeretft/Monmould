@@ -1,0 +1,25 @@
+@* Contact card *@
+<div class="contact-card">
+    <div class="text-center contact-head">
+        <img src="/assets/logo160x160.png?v=@model.buildVersion" class="contact-logo">
+        <span class="contact-logo-text-start">Mon</span>
+        <span class="contact-logo-text-end">Mould</spanv>
+        <div class=" text-uppercase contact-slogan">@model.__('brand.slogan')</div>
+        <hr>
+    </div>
+    <div class="contact-body">
+        <dl class="contact-list">
+            <dt>@model.__('contact.person'):</dt>
+            <dd>@model.contactData.person (@model.contactData.personAlias)</dd>
+            <dt>Email:</dt>
+            <dd>@model.contactData.email</dd>
+            <dt>@model.__('contact.telephone'):</dt>
+            <dd>@model.contactData.phoneLandline</dd>
+            <dt>@model.__('contact.cellphone'):</dt>
+            <dd>@model.contactData.phoneMobile</dd>
+            <dt>Skype:</dt>
+            <dd>@model.contactData.skype</dd>
+        </dl>
+    </div>
+</div>
+@* / Contact card *@

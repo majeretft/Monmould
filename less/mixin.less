@@ -1,0 +1,39 @@
+.clearfix() {
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+.float-left() {
+    float: left;
+}
+
+.float-right() {
+    float: right;
+}
+
+.marginn-center() {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a(@color, @hoverColor, @focusColor, @hoverTextDecoration) {
+    color: @color;
+
+    text-decoration: @hoverTextDecoration;
+
+    &:hover {
+        color: @hoverColor;
+        text-decoration: @hoverTextDecoration;
+    }
+
+    &:focus {
+        color: @focusColor;
+    }
+
+    &:active, &:visited {
+        text-decoration: @hoverTextDecoration;
+    }
+}

@@ -11,18 +11,33 @@
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
+    "gulp-less": "^3.3.2",
     "gulp-sourcemaps": "^2.6.0",
     "handlebars": "^4.0.10",
+    "jstransformer-handlebars": "^1.0.0",
+    "jstransformer-vash": "^0.2.0",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
     "metalsmith": "^2.3.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-collections": "^0.9.0",
+    "metalsmith-debug-ui": "^0.1.1",
     "metalsmith-env": "^2.0.0",
+    "metalsmith-favicons": "^1.0.0",
+    "metalsmith-html-minifier": "^2.2.0",
+    "metalsmith-i18n": "git+https://github.com/majeretft/metalsmith-i18n.git",
+    "metalsmith-if": "^0.1.1",
+    "metalsmith-in-place": "^3.0.1",
     "metalsmith-layouts": "^1.8.1",
     "metalsmith-markdownit": "^0.4.0",
-    "run-sequence": "^2.1.0"
+    "metalsmith-metadata": "0.0.4",
+    "metalsmith-multi-language": "git+https://github.com/majeretft/metalsmith-multi-language.git",
+    "metalsmith-permalinks": "git+https://github.com/majeretft/metalsmith-permalinks.git",
+    "metalsmith-robots": "^1.0.1",
+    "metalsmith-sitemap": "^1.2.0",
+    "metalsmith-updated": "^0.1.6",
+    "run-sequence": "^2.1.0",
+    "vash": "^0.12.2"
   },
-  "dependencies": {
-    "gulp-less": "^3.3.2",
-    "metalsmith-debug-ui": "^0.1.1"
-  }
+  "dependencies": {}
 }

@@ -1,0 +1,57 @@
+---
+title: "Home"
+menuTitle: "Home"
+permalink: false
+menuPosition: 1
+changefreq: "monthly"
+isHomePage: true
+layout: layout-index.vash
+---
+
+<div class="page-header">
+    <h1>Mould manufacturing and delivery from China</h1>
+</div>
+
+<p class="lead">
+    Mon Mould factory is located in Zhejiang province of China.
+    We perform design manufactoring and delivery of moulds to internal and external market.
+</p>
+
+<div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-4">
+        <img src="/assets/compic_.jpg" alt="" class="img-thumbnail">
+    </div>
+    <div class="col-lg-9 col-md-8 col-sm-8">
+        <p>
+            Mon Mould factory contains over 10 years experience in manufactoring of injection moulds.
+            You can order moulds to produce: 2-shot parts, auto (car) parts, 
+            household goods, PVC fittings, PPR fittings, PET preform and many other types of plastic parts.
+        </p>
+        
+        <p>
+            Mon Mould company is interested in manufactoring moulds with high shot count and excellent cost to quality ratio.
+            We are using modern equipment and software to achieve this goal.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        @if (model.collections && model.collections[`root_portfolio_${model.locale}`]) {
+            let c = model.collections[`root_portfolio_${model.locale}`];
+
+            <h2>Product samples:</h2>
+            <ul>
+                @c.forEach(function(i){
+                    var l = i.portfolioLogo ? `/assets/img/${i.portfolioLogo}` : 'http://via.placeholder.com/252x252?text=No+image'
+                    <li>
+                        <a href="/@i.path"> @i.title</a>
+                    </li>
+                })
+            </li>
+        }
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-offset-2 col-sm-8">
+        <img src="/assets/a8_.jpg" alt="" class="img-thumbnail">
+    </div>
+</div>

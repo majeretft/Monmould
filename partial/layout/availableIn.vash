@@ -1,0 +1,23 @@
+@{ 
+    var hasLocales = false;
+}
+
+<div class="text-right text-info available-in">
+    @model.__('common.switchToLanguage') 
+
+    @model.locales.forEach(function(l) {
+        if (model.locale === l)
+            return;
+
+        var lang = model.lang(l);
+        if (lang) {
+            hasLocales = true;
+            var href = '/' + lang.path;
+            <a href="@html.raw(href)" class="btn btn-link btn-sm">@model.__('langName', {locale: l})</a>
+        }
+    })
+
+    @if (!hasLocales) {
+        <span>no translations</span>
+    }
+</div>

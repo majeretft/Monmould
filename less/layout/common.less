@@ -1,0 +1,64 @@
+// layout section
+.content {
+    background-color: white;
+    border: 1px solid #d4d4d4;
+    border-top: none;
+    border-bottom-left-radius: @radius-lg;
+    border-bottom-right-radius: @radius-lg;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.175);
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: @color-text-dark;
+    background-color: @color-bg-lightgray;
+}
+
+// ----------------// Footer
+.footer-content {
+    background-color: @color-bg-black;
+    padding: 20px 15px;
+    margin-top: 20px;
+    color: darken(@color-text-light, 10%);
+
+    a {
+        .a(darken(@color-text-light, 10%), lighten(@color-text-blue, 25%), lighten(@color-text-blue, 25%), none);
+    }
+}
+
+.footer-header {
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer-logo {
+    width: 50px;
+}
+// ------------------
+
+// Copywrite
+.copywrite {
+    margin-bottom: 10px;
+    color: darken(@color-text-light, 20%);
+}
+// ------------------
+
+.bottom-spacing {
+    margin-bottom: @margin-after-element;
+}
+
+.inline-block-margin {
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-size: 30px;
+}
+
+.img-max-width {
+    max-width: 100%;
+}

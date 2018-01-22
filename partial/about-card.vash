@@ -1,0 +1,18 @@
+@* About *@
+<div class="about-card">
+    <div>
+        <h3>@model.__('about.about')</h3>
+        <hr>
+    </div>
+    <p>
+        @model.__('about.briefly')[0]
+    </p>
+    <p>
+        @model.__('about.briefly')[1]
+    </p>
+    @{
+        let href = model.locale === model.defaultLocale ? 'about-us' : model.locale + '/about-us'
+        <a href="/@href" class="text-uppercase read-more">@model.__('common.moreInfo') @model.__('about.about')</a>
+    }
+</div>
+@* / About *@

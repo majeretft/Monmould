@@ -1,0 +1,18 @@
+---
+title: "Gallery"
+uri: "gallery"
+menuPosition: 4
+changefreq: "monthly"
+---
+
+<div class="page-header">
+    <h1>Gallery</h1>
+</div>
+
+<p>
+    Quality is the life of factory, Mon are focus on this and always try to provide best mold solution for customer. 
+    With newest mold design principle, with the best machine processing (High speed CNC, high speed Engrave, slow wire cut), 
+    it is easy to get honest/good quality in Mon mould factory.
+</p>
+
+@html.include('partial/portfolio-card.vash', model)

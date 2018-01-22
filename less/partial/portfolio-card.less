@@ -1,0 +1,13 @@
+.portfolio-card {
+    transition: all ease-in-out 0.1s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.175);
+
+    &:hover {
+        box-shadow: 0 4px 10px fade(@color-bg-blue, 40%);
+        border-color: @color-bg-blue;
+    }
+
+    > .caption > h3 {
+        height: 78px;
+    }
+}

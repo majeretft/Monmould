@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="@model.locale">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    @* The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags *@
+    <title>@model.title | Mon Mould Factory</title>
+    
+    <meta name="format-detection" content="telephone=no"/>
+
+    @html.include('partial/layout/favicon.vash', model)
+</head>
+
+<body>
+
+    <div class="container content">
+        @if (model.DEBUG) {
+            @html.include("partial/debug.vash", model)
+        }
+
+        <header>
+            <div class="row lang-panel">
+                <div class="col-lg-offset-10 col-lg-2 col-md-offset-9 col-lg-3 col-sm-offset-6 col-sm-6">
+                    @html.include('partial/layout/lang-switcher.vash', model)
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-1">
+                    @html.include('partial/layout/menu-logo.vash', model)
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-11">
+                    @html.include('partial/layout/menu.vash', model)
+                </div>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                @html.include('partial/banner.vash', model)
+                <main>
+                    @html.raw(model.contents)
+                </main>
+            </div>
+            <aside class="col-lg-3 col-md-4 col-sm-12 hidden-sm">
+                @html.include('partial/contact-card.vash', model)
+                @html.include('partial/about-card.vash', model)
+            </aside>
+        </div>
+        <footer>
+            @html.include('partial/layout/footer.vash', model)
+        </footer>
+    </div>
+    <div class="container text-center copywrite">&copy; since 2004 Taizhou Huangyan Mon Mould Factory</div>
+
+    @* Custom font *@
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    @* Latest compiled and minified CSS *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    @* Latest compiled and minified CSS *@
+    <link rel="stylesheet" href="/css/index.css?v=@model.buildVersion">
+
+    @* jQuery (necessary for Bootstrap's JavaScript plugins) *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    @* Latest compiled and minified JavaScript *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    @* Yandex share *@
+    <script src="//yastatic.net/share2/share.js"></script>
+
+    @if (!model.DEBUG) {
+        @html.raw('<!--noindex-->')
+        @* Yandex.Metrika counter *@
+        <script type="text/javascript" >
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter47393731 = new Ya.Metrika2({
+                            id:47393731,
+                            clickmap:true,
+                            trackLinks:true,
+                            accurateTrackBounce:true,
+                            webvisor:true,
+                            trackHash:true
+                        });
+                    } catch(e) { }
+                });
+
+                var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+            })(document, window, "yandex_metrika_callbacks2");
+        </script>
+        <noscript><div><img src="https://mc.yandex.ru/watch/47393731" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        @* /Yandex.Metrika counter *@
+        @* Global site tag (gtag.js) - Google Analytics *@
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72818193-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-72818193-3');
+        </script>
+        @* /Global site tag (gtag.js) - Google Analytics *@
+        @html.raw('<!--/noindex-->')
+    }
+
+</body>
+
+</html>

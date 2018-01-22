@@ -1,0 +1,43 @@
+---
+title: "Mould design"
+uri: "mold-design"
+changefreq: "monthly"
+portfolioLogo: "portfolio-mold-design.jpg"
+---
+
+<div class="page-header">
+    <h1>Mould design</h1>
+</div>
+
+<p>
+    Engineers in Mon contains 10 years experience in molds design and building. 
+    MON insist to use latest mold design to ensure mold quality, mold life to reach customer’s production request. 
+    Especially in custom part or new explore products, with rich experience, 
+    Mon will provide suggestion and solution on article adjust to be best and suitable to injection out.
+</p>
+
+<div class="row">
+    @{
+        let imgs = [
+            { name: 'Mold-for-Car-Mirror-hosing', ext: '.jpg' , alt: '', text: 'Mold for mirror housing' },
+            { name: 'Mold-for-case', ext: '.jpg' , alt: '', text: 'Mold for case' },
+            { name: 'Mold-for-custom-shelf', ext: '.jpg' , alt: '', text: 'Mold for custom shelf' },
+            { name: 'Mold-for-drawer', ext: '.jpg' , alt: '', text: 'Mold for drawer' },
+            { name: 'Mold-for-Trash-can', ext: '.jpg' , alt: '', text: 'Mold for trash can' },
+            { name: 'Two-floor-mold-1', ext: '.jpg' , alt: '', text: 'Two floor mold' },
+            { name: 'Two-floor-mold-2', ext: '.jpg' , alt: '', text: 'Two floor mold' },
+            { name: 'Two-floor-mold-3', ext: '.jpg' , alt: '', text: 'Two floor mold' },
+        ];
+        let path = '/assets/mold-design/';
+
+        imgs.forEach(function(i) {
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="thumbnail modal-link" data-toggle="modal" data-target="#imgModal" data-text="@i.text">
+                    <img src="@(path + i.name + i.ext)" alt="i.alt" class="img-max-width">
+                </div>
+            </div>
+        })
+    }
+</div>
+
+@html.include('partial/img-modal.vash', model)

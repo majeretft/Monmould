@@ -1,0 +1,12 @@
+@* Language switcher *@
+<nav class="clearfix">
+    <ul class="pull-right list-inline lang-list">
+        @model.locales.forEach(function(l) {
+            var href = l === model.defaultLocale ? "" : l;
+            <li>
+                <a href="/@html.raw(href)" hreflang="@l" class="btn btn-link btn-xs">@model.__('langName', {locale: l})</a>
+            </li>
+        })
+    </ul>
+</nav>
+@* / Language switcher *@

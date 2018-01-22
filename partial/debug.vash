@@ -1,0 +1,21 @@
+<style>
+    .mm-debug {
+        background-color: #000;
+        padding: 10px 0;
+        color: beige;
+    }
+
+    .mm-debug a {
+        color: chartreuse;
+    }
+
+    .mm-debug a:hover, .mm-debug a:focus {
+        color: white;
+    }
+</style>
+
+<div class="row mm-debug">
+    <div class="col-xs-12">
+        This is development build. Access DEBUG metadata using <a href="/debug-ui/">this link</a> 
+    </div>
+</div>

@@ -1,0 +1,43 @@
+---
+title: "Проектирование пресс-форм"
+uri: "mold-design"
+changefreq: "monthly"
+portfolioLogo: "portfolio-mold-design.jpg"
+---
+
+<div class="page-header">
+    <h1>Проектирование пресс-форм</h1>
+</div>
+
+
+<p>
+    Конструктора Mon Mould имеют более 10 лет опыта в разработке пресс-форм.
+    Мы используем последние наработки в области проектирования форм для обеспечения качества и долговечности, чтобы выполнить запрос заказчика.
+    Основываясь на своем богатом опыте мы предоставим решения для требуемого режима работы литьевых форм.
+</p>
+
+<div class="row">
+    @{
+        let imgs = [
+            { name: 'Mold-for-Car-Mirror-hosing', ext: '.jpg' , alt: '', text: 'Форма для автомобильного зеркала' },
+            { name: 'Mold-for-case', ext: '.jpg' , alt: '', text: 'Форма для корпуса' },
+            { name: 'Mold-for-custom-shelf', ext: '.jpg' , alt: '', text: 'Форма для подставки' },
+            { name: 'Mold-for-drawer', ext: '.jpg' , alt: '', text: 'Форма для выдвижного ящика' },
+            { name: 'Mold-for-Trash-can', ext: '.jpg' , alt: '', text: 'Форма для мусорного контейнера' },
+            { name: 'Two-floor-mold-1', ext: '.jpg' , alt: '', text: 'Форма с многократным раскрытием' },
+            { name: 'Two-floor-mold-2', ext: '.jpg' , alt: '', text: 'Форма с многократным раскрытием' },
+            { name: 'Two-floor-mold-3', ext: '.jpg' , alt: '', text: 'Форма с многократным раскрытием' },
+        ];
+        let path = '/assets/mold-design/';
+
+        imgs.forEach(function(i) {
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="thumbnail modal-link" data-toggle="modal" data-target="#imgModal" data-text="@i.text">
+                    <img src="@(path + i.name + i.ext)" alt="i.alt" class="img-max-width">
+                </div>
+            </div>
+        })
+    }
+</div>
+
+@html.include('partial/img-modal.vash', model)

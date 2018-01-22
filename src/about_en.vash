@@ -1,0 +1,53 @@
+---
+title: "About us"
+uri: "about-us"
+menuPosition: 2
+changefreq: "monthly"
+hideAboutCard: true
+---
+
+<div class="page-header">
+    <h1>About</h1>
+</div>
+
+<p class="lead">
+    Taizhou Mon Mould is one prominent injection mould maker from China. Mon contains over 20 years experience in plastic injection Mold, 
+    and keeps focusing on Plastic mould for houseware, Commodity, Pipe Fittings Mould.
+</p>
+<p>
+    We use the latest moulds software, technology to built best mould to satisfy our customers.
+    We design moulds according to customer need.
+</p>
+<ol>
+    <li>
+        If high vulome mould is request
+        we use modern design(design strong mould, add famouse hot runner, concentrated cooling system)
+        good material(China famouse steel company, Inported Eroupean steel) 
+        with best treatment, processing(Quench, nitriding, high speed CNC, high speed carved)
+        to ensure customer will get good quality, high efficient, strong tools.
+    </li>
+    <li>
+        If lower vulome mould is request
+        Upon to vulome, we will recommend and choose normal, cheaper material for mould,
+        As 45# P20, 718 and so on.
+        Our option is "Trying to save cost for customers" 
+    </li>
+</ol>
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="thumbnail">
+            <img src="/assets/a7_.jpg" alt="">
+        </div>
+        <div class="thumbnail">
+            <img src="/assets/a6_.jpg" alt="">
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6">
+        <div class="thumbnail">
+            <img src="/assets/a8_.jpg" alt="">
+        </div>
+        <div class="thumbnail">
+            <img src="/assets/QQ20171215134229_.jpg" alt="">
+        </div>
+    </div>
+</div>

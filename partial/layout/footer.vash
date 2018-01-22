@@ -1,0 +1,67 @@
+<div class="row footer-content">
+
+    <div class="col-lg-3 col-md-3 col-sm-4">
+        <h4 class="footer-header"><img src="/assets/logo100x100.png?v=@model.buildVersion" alt="" class="footer-logo"> Mon Mould</h3>
+        <p>@model.__('footer.brandText')</p>
+        <p>@model.__('footer.share')</p>
+        <div class="ya-share2" data-services="viber,whatsapp,skype,vkontakte,gplus,facebook,twitter,blogger,linkedin" data-limit="5" data-lang="@model.locale" data-popup-direction="top"></div>
+    </div>
+
+    @if (model.collections && model.collections[`root_portfolio_${model.locale}`]) {
+        let c = model.collections[`root_portfolio_${model.locale}`];
+        let rowCount = 6;
+
+        <div class="col-lg-3 col-md-3 col-sm-4">
+            <h4 class="footer-header">@model.__('footer.mouldsAndSamples')</h4>
+            @* <div class="row">
+
+                <div class="col-lg-6"> *@
+                    @for (let index = 0; index < rowCount; index++) {
+                        @if (c[index]) {
+                            <p>
+                                <a href="/@c[index].path">@c[index].title</a>
+                            </p>
+                        }
+                    }
+                @* </div>
+
+                <div class="col-lg-6">
+                    @for (let index = rowCount; index < rowCount*2; index++) {
+                        @if (c[index]) {
+                            <p>
+                                <a href="/@c[index].path">@c[index].title</a>
+                            </p>
+                        }
+                    }
+                </div> *@
+
+            @* </div> *@
+        </div>
+    }
+
+    <div class="col-lg-3 col-md-3 col-sm-4">
+        <h4 class="footer-header">@model.__('footer.follow')</h4>
+        <p>
+            <a href="https://www.youtube.com/channel/UC8DPeWTU6yQCvBqKBxb3tZw" target="_blank"><i class="icon-youtube"></i> Youtube channel</p></a>
+        <p>
+            <a href="http://monmould.blogspot.ru/" target="_blank"><i class="icon-blogger"></i> Blog</a>
+        </p>
+        <p>
+            <a href="https://www.facebook.com/fang.steven.583" target="_blank"><i class="icon-facebook-official"></i> Facebook</a>
+        </p>
+        <p>
+            <a href="https://twitter.com/monmould" target="_blank"><i class="icon-twitter"></i> Twitter</a>
+        </p>
+    </div>
+
+    <div class="col-lg-3 col-md-3 hidden-sm">
+        <h4 class="footer-header">@model.__('contact.contact')</h4>
+        <p>@model.__('contact.person'): @model.contactData.person (@model.contactData.personAlias)</p>
+        <p>Email: @model.contactData.email</p>
+        <p>@model.__('contact.telephone'): <span class="text-nowrap">@model.contactData.phoneLandline</span></p>
+        <p>@model.__('contact.cellphone'): <span class="text-nowrap">@model.contactData.phoneMobile</span></p>
+        <p>Skype: @model.contactData.skype</p>
+        <p>@model.__('contact.mainWebsite'): <a href="http://monmould.com" target="_blank" hreflang="cn">monmould.com</a></p>
+    </div>
+    
+</div>
