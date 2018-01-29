@@ -22,12 +22,12 @@
 
         <header>
             <div class="row lang-panel">
-                <div class="col-lg-offset-10 col-lg-2 col-md-offset-9 col-lg-3 col-sm-offset-6 col-sm-6">
+                <div class="col-lg-offset-10 col-lg-2 col-md-offset-9 col-lg-3 col-sm-offset-6 col-sm-6 hidden-xs">
                     @html.include('partial/layout/lang-switcher.vash', model)
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-1">
+                <div class="col-lg-3 col-md-3 col-sm-1 hidden-xs">
                     @html.include('partial/layout/menu-logo.vash', model)
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-11">
@@ -37,12 +37,14 @@
         </header>
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-12">
-                @html.include('partial/banner.vash', model)
+                <div class="hidden-xs">
+                    @html.include('partial/banner.vash', model)
+                </div>
                 <main>
                     @html.raw(model.contents)
                 </main>
             </div>
-            <aside class="col-lg-3 col-md-4 col-sm-12 hidden-sm">
+            <aside class="col-lg-3 col-md-4 col-sm-12 hidden-sm hidden-xs">
                 @html.include('partial/contact-card.vash', model)
                 @html.include('partial/about-card.vash', model)
             </aside>
