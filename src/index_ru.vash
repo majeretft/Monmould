@@ -18,10 +18,10 @@ layout: layout-index.vash
 </p>
 
 <div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-4">
-        <img src="/assets/compic_.jpg" alt="" class="img-thumbnail">
+    <div class="col-lg-5 col-md-6 col-sm-6">
+        <img src="/assets/factory.jpg" alt="" class="img-thumbnail">
     </div>
-    <div class="col-lg-9 col-md-8 col-sm-8">
+    <div class="col-lg-7 col-md-6 col-sm-6">
         <p>
             Предприятие Mon Mould имеет более 10 лет опыта в производстве пресс-форм для литья пластмасс под давлением.
             У нас вы можете заказать пресс-формы для: двухцветного литья, автомобильных деталей, 
@@ -53,6 +53,6 @@ layout: layout-index.vash
         }
     </div>
     <div class="col-md-offset-0 col-lg-6 col-md-6 col-sm-offset-2 col-sm-8">
-        <img src="/assets/a8_.jpg" alt="" class="img-thumbnail">
+        <img src="/assets/QQ20171215134229_.jpg" alt="" class="img-thumbnail">
     </div>
 </div>
